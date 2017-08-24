@@ -13,9 +13,9 @@
 		712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */; };
 		712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69061F46D49100E12B4F /* Focus_timerTests.swift */; };
 		712F69121F46D49100E12B4F /* Focus_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69111F46D49100E12B4F /* Focus_timerUITests.swift */; };
-		712F692A1F46EC8300E12B4F /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69291F46EC8300E12B4F /* ViewTwo.swift */; };
 		7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */; };
 		7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E32C1F4EAB700063A7F5 /* ViewController.swift */; };
+		7186E3311F4EF4270063A7F5 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3301F4EF4270063A7F5 /* MusicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +48,11 @@
 		712F690D1F46D49100E12B4F /* Focus timerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus timerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712F69111F46D49100E12B4F /* Focus_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_timerUITests.swift; sourceTree = "<group>"; };
 		712F69131F46D49100E12B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		712F69291F46EC8300E12B4F /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewTwo.swift; path = ../ViewTwo.swift; sourceTree = "<group>"; };
 		7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Focus timer-Bridging-Header.h"; sourceTree = "<group>"; };
 		7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		7186E32C1F4EAB700063A7F5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7186E3301F4EF4270063A7F5 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				712F68F11F46D49100E12B4F /* AppDelegate.swift */,
-				712F69291F46EC8300E12B4F /* ViewTwo.swift */,
 				712F68F51F46D49100E12B4F /* Main.storyboard */,
 				712F68F81F46D49100E12B4F /* Assets.xcassets */,
 				7186E32C1F4EAB700063A7F5 /* ViewController.swift */,
+				7186E3301F4EF4270063A7F5 /* MusicViewController.swift */,
 				712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */,
 				712F68FD1F46D49100E12B4F /* Info.plist */,
 				7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */,
@@ -270,8 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7186E3311F4EF4270063A7F5 /* MusicViewController.swift in Sources */,
 				712F68F21F46D49100E12B4F /* AppDelegate.swift in Sources */,
-				712F692A1F46EC8300E12B4F /* ViewTwo.swift in Sources */,
 				7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */,
 				7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */,
 			);
