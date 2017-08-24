@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		712F68F21F46D49100E12B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F68F11F46D49100E12B4F /* AppDelegate.swift */; };
-		712F68F41F46D49100E12B4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F68F31F46D49100E12B4F /* ViewController.swift */; };
 		712F68F71F46D49100E12B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68F51F46D49100E12B4F /* Main.storyboard */; };
 		712F68F91F46D49100E12B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712F68F81F46D49100E12B4F /* Assets.xcassets */; };
 		712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */; };
 		712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69061F46D49100E12B4F /* Focus_timerTests.swift */; };
 		712F69121F46D49100E12B4F /* Focus_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69111F46D49100E12B4F /* Focus_timerUITests.swift */; };
 		712F692A1F46EC8300E12B4F /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69291F46EC8300E12B4F /* ViewTwo.swift */; };
+		7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */; };
+		7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E32C1F4EAB700063A7F5 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		712F68EE1F46D49100E12B4F /* Focus timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Focus timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712F68F11F46D49100E12B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		712F68F31F46D49100E12B4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		712F68F61F46D49100E12B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		712F68F81F46D49100E12B4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		712F68FB1F46D49100E12B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,10 @@
 		712F69111F46D49100E12B4F /* Focus_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_timerUITests.swift; sourceTree = "<group>"; };
 		712F69131F46D49100E12B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712F69291F46EC8300E12B4F /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewTwo.swift; path = ../ViewTwo.swift; sourceTree = "<group>"; };
+		7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Focus timer-Bridging-Header.h"; sourceTree = "<group>"; };
+		7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		7186E32C1F4EAB700063A7F5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +104,15 @@
 			isa = PBXGroup;
 			children = (
 				712F68F11F46D49100E12B4F /* AppDelegate.swift */,
-				712F68F31F46D49100E12B4F /* ViewController.swift */,
 				712F69291F46EC8300E12B4F /* ViewTwo.swift */,
 				712F68F51F46D49100E12B4F /* Main.storyboard */,
 				712F68F81F46D49100E12B4F /* Assets.xcassets */,
+				7186E32C1F4EAB700063A7F5 /* ViewController.swift */,
 				712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */,
 				712F68FD1F46D49100E12B4F /* Info.plist */,
+				7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */,
+				7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */,
+				7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */,
 			);
 			path = "Focus timer";
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				TargetAttributes = {
 					712F68ED1F46D49100E12B4F = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					712F69011F46D49100E12B4F = {
@@ -262,9 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				712F68F41F46D49100E12B4F /* ViewController.swift in Sources */,
 				712F68F21F46D49100E12B4F /* AppDelegate.swift in Sources */,
 				712F692A1F46EC8300E12B4F /* ViewTwo.swift in Sources */,
+				7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */,
+				7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,10 +425,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Focus timer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "s3551368-student.rmit.edu.au.Focus-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Focus timer/Focus timer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,10 +440,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Focus timer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "s3551368-student.rmit.edu.au.Focus-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Focus timer/Focus timer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -509,6 +523,7 @@
 				712F69181F46D49100E12B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		712F69191F46D49100E12B4F /* Build configuration list for PBXNativeTarget "Focus timerTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +532,7 @@
 				712F691B1F46D49100E12B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		712F691C1F46D49100E12B4F /* Build configuration list for PBXNativeTarget "Focus timerUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +541,7 @@
 				712F691E1F46D49100E12B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
