@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewTwo.swift"
+            timestampString = "525075483.70013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "ViewTwo"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.ViewTwo.Array.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer/ViewTwo.swift"
+                  timestampString = "525075601.563147"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.ViewTwo.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Focus_timer.ViewTwo"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer/ViewTwo.swift"
+                  timestampString = "525075601.564635"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "247">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.ViewTwo.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Focus_timer.ViewTwo&gt;"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer/ViewTwo.swift"
+                  timestampString = "525075601.566503"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "167">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -14,6 +14,7 @@
 		712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */; };
 		712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69061F46D49100E12B4F /* Focus_timerTests.swift */; };
 		712F69121F46D49100E12B4F /* Focus_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69111F46D49100E12B4F /* Focus_timerUITests.swift */; };
+		712F692A1F46EC8300E12B4F /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69291F46EC8300E12B4F /* ViewTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		712F690D1F46D49100E12B4F /* Focus timerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus timerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712F69111F46D49100E12B4F /* Focus_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_timerUITests.swift; sourceTree = "<group>"; };
 		712F69131F46D49100E12B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		712F69291F46EC8300E12B4F /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewTwo.swift; path = ../ViewTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				712F68F11F46D49100E12B4F /* AppDelegate.swift */,
 				712F68F31F46D49100E12B4F /* ViewController.swift */,
+				712F69291F46EC8300E12B4F /* ViewTwo.swift */,
 				712F68F51F46D49100E12B4F /* Main.storyboard */,
 				712F68F81F46D49100E12B4F /* Assets.xcassets */,
 				712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				712F68F41F46D49100E12B4F /* ViewController.swift in Sources */,
 				712F68F21F46D49100E12B4F /* AppDelegate.swift in Sources */,
+				712F692A1F46EC8300E12B4F /* ViewTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
