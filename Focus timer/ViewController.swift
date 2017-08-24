@@ -8,18 +8,88 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    @IBOutlet weak var Label: UILabel!
+    
     @IBOutlet weak var shareButton: UIBarButtonItem!
    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    override func viewDidLoad() {
+    @IBOutlet weak var startOutlet: UIButton!
+    
+    @IBOutlet weak var stopOutlet: UIButton!
+    
+    
+    var sec = 1500
+    
+    var timer = Timer()
+    
+    var Array = ["1500","1800","3600"]
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         sideMenus()
-        // Do any additional setup after loading the view.
+        pickerView.delegate = self
+        pickerView.dataSource = self
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        sec = Int(Array[row])!
+        let minutes = Int(sec) / 60
+        let seconds = Int(sec) % 60
+        return String(format: "%02i:%02i",minutes,seconds)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return Array.count
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        sec = Int(Array[row])!
+        let minutes = Int(sec) / 60
+        let seconds = Int(sec) % 60
+        Label.text = String(format: "%02i:%02i",minutes,seconds)
     }
 
+    @IBAction func startAction(_ sender: Any)
+    {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
+        
+    }
+    
+    func counter()
+    {
+        sec -= 1
+        let minutes = Int(sec) / 60
+        let seconds = Int(sec) % 60
+        Label.text = String(format: "%02i:%02i",minutes,seconds)
+        
+        if (sec == 0)
+        {
+            timer.invalidate()
+        }
+    }
+    
+    @IBAction func stopAction(_ sender: Any)
+    {
+        timer.invalidate()
+        sec = 1500
+        Label.text = "25:00"
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,8 +102,8 @@ class ViewController: UIViewController {
         {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rearViewRevealWidth = 275
-            revealViewController().rightViewRevealWidth = 160
+            revealViewController().rearViewRevealWidth = 180
+            revealViewController().rightViewRevealWidth = 180
             
             
             shareButton.target = revealViewController()
