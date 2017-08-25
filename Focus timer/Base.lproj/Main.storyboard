@@ -332,23 +332,26 @@
                         <sections>
                             <tableViewSection id="sbP-0m-VPa">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="U9Z-Rd-Vze">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U9Z-Rd-Vze">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U9Z-Rd-Vze" id="DZf-xV-5Mc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHARE TO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej8-wh-rWr">
-                                                    <rect key="frame" x="80" y="9" width="97" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOCUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFD-81-M4V">
+                                                    <rect key="frame" x="81" y="11" width="57" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Rt3-cM-Cgp" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="1ev-za-z8L"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Sdo-6u-1Ag">
                                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -357,8 +360,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WECHAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-Uy-Wvs">
-                                                    <rect key="frame" x="80" y="9" width="70" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHARE TO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej8-wh-rWr">
+                                                    <rect key="frame" x="79" y="9" width="84" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -367,24 +370,9 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.40336044519999997" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p73-4b-XC9">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p73-4b-XC9" id="a7J-KI-hfF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FACEBOOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi5-64-JoA">
-                                                    <rect key="frame" x="81" y="11" width="88" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.40336044519999997" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vZH-tH-jLw" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="FwY-uC-No0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -397,7 +385,77 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFc-qX-aeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4100" y="2332"/>
+            <point key="canvasLocation" x="4351" y="2332"/>
+        </scene>
+        <!--Facebook Share View Controller-->
+        <scene sceneID="9nK-XL-Kp1">
+            <objects>
+                <viewController id="sXw-aO-rRp" customClass="FacebookShareViewController" customModule="Focus_timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="11b-Fy-hFH"/>
+                        <viewControllerLayoutGuide type="bottom" id="N9F-gE-feI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Yd-ke-gGj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ij2-yC-QRd">
+                        <barButtonItem key="rightBarButtonItem" image="20402" id="fGQ-cv-2o6">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareButton" destination="fGQ-cv-2o6" id="1Ue-1g-e39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5c-ep-GSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5200" y="4820"/>
+        </scene>
+        <!--Wechat Share View Controller-->
+        <scene sceneID="owO-Gj-Pxl">
+            <objects>
+                <viewController id="6tM-Vb-rzH" customClass="WechatShareViewController" customModule="Focus_timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PXz-Qf-apk"/>
+                        <viewControllerLayoutGuide type="bottom" id="g0C-PB-Qgs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gOn-8g-jHo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PQv-UC-ygz">
+                        <barButtonItem key="rightBarButtonItem" image="20402" id="YAT-lX-3yV">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareButton" destination="YAT-lX-3yV" id="Ini-Da-tqo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuy-9m-M3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3558" y="4820"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="opY-9T-jt6">
+            <objects>
+                <tabBarController id="vZH-tH-jLw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="b3T-e7-HFK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5JJ-o3-FuB" kind="relationship" relationship="viewControllers" id="LAV-GG-Kx0"/>
+                        <segue destination="93W-e5-MzS" kind="relationship" relationship="viewControllers" id="IH3-Uf-CWO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xh-wa-zwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4351" y="3099"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kV9-F8-COU">
@@ -578,6 +636,44 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="3098.6413043478265"/>
         </scene>
+        <!--WECHAT-->
+        <scene sceneID="Rn3-vU-xk5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5JJ-o3-FuB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WECHAT" image="wechat-logo-social-media-communication-3c6d7b2f06545485-24x24" id="drz-qT-FZh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6yI-lV-wDb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6tM-Vb-rzH" kind="relationship" relationship="rootViewController" id="2Rl-B8-1S5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ab-8A-Hcn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3559" y="3933"/>
+        </scene>
+        <!--FACKBOOK-->
+        <scene sceneID="3P3-p1-uPg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="93W-e5-MzS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="FACKBOOK" image="facebook-logo-social-media-communication-3d34f264c9712ce4-24x24" id="t1h-db-ESo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OTK-hO-XHp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sXw-aO-rRp" kind="relationship" relationship="rootViewController" id="tfA-Fv-KMA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uik-Mh-6Di" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5201" y="3933"/>
+        </scene>
     </scenes>
     <resources>
         <image name="------" width="344" height="1"/>
@@ -592,9 +688,11 @@
         <image name="Rectangle 3 Copy 2" width="179" height="179"/>
         <image name="The bad news is time" width="257" height="31"/>
         <image name="WechatIMG6 1" width="230" height="396"/>
+        <image name="facebook-logo-social-media-communication-3d34f264c9712ce4-24x24" width="24" height="24"/>
+        <image name="wechat-logo-social-media-communication-3c6d7b2f06545485-24x24" width="24" height="24"/>
         <image name="屏幕快照 2017-08-14 下午11.40.42" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pMq-ZO-iWA"/>
+        <segue reference="1ev-za-z8L"/>
     </inferredMetricsTieBreakers>
 </document>
