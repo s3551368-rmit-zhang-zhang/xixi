@@ -1,5 +1,5 @@
 //
-//  FacebookShareViewController.swift
+//  WechatshareViewController.swift
 //  Focus timer
 //
 //  Created by Zhang Zhang on 8/25/17.
@@ -8,35 +8,36 @@
 
 import UIKit
 import Social
-class FacebookShareViewController: UIViewController {
 
+class TwitterShareViewController: UIViewController {
+    
+   
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        sideMenus()
         
+        sideMenus()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func shareButtonAction(_ sender: Any)
+    @IBAction func shareButton(_ sender: Any)
     {
         //Alert
         let alert = UIAlertController(title: "Share", message:"Share Focus today!", preferredStyle: .actionSheet)
         
         //First action
-        let action = UIAlertAction(title: "Share on Facebook", style: .default)
+        let action = UIAlertAction(title: "Share on Twitter", style: .default)
         {(action) in
             
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook)
+            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)
             {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
                 
                 post?.setInitialText("I'm using Focus now, come and join me!")
                 
@@ -46,7 +47,7 @@ class FacebookShareViewController: UIViewController {
             }
             else
             {
-                self.showAlert(service: "Facebook")
+                self.showAlert(service: "Twitter")
             }
         }
         
@@ -65,11 +66,14 @@ class FacebookShareViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion:nil)
     }
+    
+    
+    
     func sideMenus()
     {
         if revealViewController() != nil
         {
-        
+            
             revealViewController().rearViewRevealWidth = 180
             revealViewController().rightViewRevealWidth = 180
             
@@ -80,16 +84,16 @@ class FacebookShareViewController: UIViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
