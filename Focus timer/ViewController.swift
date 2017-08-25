@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
@@ -28,6 +29,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var timer = Timer()
     
     var Array = ["1500","1800","3600"]
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad()
     {
@@ -35,6 +37,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         sideMenus()
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "1", ofType: ".mp3")
+            try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+        }
+        catch
+        {
+         //ERROR
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
@@ -65,7 +77,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func startAction(_ sender: Any)
     {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
-        
+        audioPlayer.play()
     }
     
     func counter()
@@ -78,6 +90,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if (sec == 0)
         {
             timer.invalidate()
+            audioPlayer.stop()
         }
     }
     
@@ -86,6 +99,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         timer.invalidate()
         sec = 1500
         Label.text = "25:00"
+        audioPlayer.stop()
     }
     
     

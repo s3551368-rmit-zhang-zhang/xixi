@@ -49,12 +49,16 @@ class FacebookShareViewController: UIViewController {
                 self.showAlert(service: "Facebook")
             }
         }
+        //Second action
+        let actionTwo = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         //Add action to action sheet
         alert.addAction(action)
         
+        alert.addAction(actionTwo)
         //Present alert
         self.present(alert, animated: true, completion:nil)
+        
     }
     
     func showAlert(service:String)
@@ -65,6 +69,7 @@ class FacebookShareViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion:nil)
     }
+    
     func sideMenus()
     {
         if revealViewController() != nil

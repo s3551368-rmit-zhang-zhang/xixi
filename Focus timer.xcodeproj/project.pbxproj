@@ -12,6 +12,7 @@
 		710A42AD1F4FD1E700B18F6D /* TwitterShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */; };
 		710A42AF1F4FD1FA00B18F6D /* FacebookShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42AE1F4FD1FA00B18F6D /* FacebookShareViewController.swift */; };
 		710A42B11F4FF15000B18F6D /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A42B01F4FF15000B18F6D /* 12.png */; };
+		710A42B31F4FFAAB00B18F6D /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 710A42B21F4FFAAB00B18F6D /* 1.mp3 */; };
 		712F68F21F46D49100E12B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F68F11F46D49100E12B4F /* AppDelegate.swift */; };
 		712F68F71F46D49100E12B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68F51F46D49100E12B4F /* Main.storyboard */; };
 		712F68F91F46D49100E12B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712F68F81F46D49100E12B4F /* Assets.xcassets */; };
@@ -45,7 +46,8 @@
 		710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutFocusViewController.swift; sourceTree = "<group>"; };
 		710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterShareViewController.swift; sourceTree = "<group>"; };
 		710A42AE1F4FD1FA00B18F6D /* FacebookShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookShareViewController.swift; sourceTree = "<group>"; };
-		710A42B01F4FF15000B18F6D /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		710A42B01F4FF15000B18F6D /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 12.png; path = ../12.png; sourceTree = "<group>"; };
+		710A42B21F4FFAAB00B18F6D /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 		712F68EE1F46D49100E12B4F /* Focus timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Focus timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712F68F11F46D49100E12B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		712F68F61F46D49100E12B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				712F68F01F46D49100E12B4F /* Focus timer */,
-				710A42B01F4FF15000B18F6D /* 12.png */,
 				712F69051F46D49100E12B4F /* Focus timerTests */,
 				712F69101F46D49100E12B4F /* Focus timerUITests */,
 				712F68EF1F46D49100E12B4F /* Products */,
@@ -136,6 +137,8 @@
 				7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */,
 				7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */,
 				7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */,
+				710A42B01F4FF15000B18F6D /* 12.png */,
+				710A42B21F4FFAAB00B18F6D /* 1.mp3 */,
 			);
 			path = "Focus timer";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */,
 				712F68F91F46D49100E12B4F /* Assets.xcassets in Resources */,
 				712F68F71F46D49100E12B4F /* Main.storyboard in Resources */,
+				710A42B31F4FFAAB00B18F6D /* 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

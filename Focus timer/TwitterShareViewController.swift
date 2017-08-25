@@ -32,7 +32,7 @@ class TwitterShareViewController: UIViewController {
         let alert = UIAlertController(title: "Share", message:"Share Focus today!", preferredStyle: .actionSheet)
         
         //First action
-        let action = UIAlertAction(title: "Share on Twitter", style: .default)
+        let actionOne = UIAlertAction(title: "Share on Twitter", style: .default)
         {(action) in
             
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)
@@ -50,12 +50,16 @@ class TwitterShareViewController: UIViewController {
                 self.showAlert(service: "Twitter")
             }
         }
+        //Second action
+        let actionTwo = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         //Add action to action sheet
-        alert.addAction(action)
+        alert.addAction(actionOne)
         
+        alert.addAction(actionTwo)
         //Present alert
         self.present(alert, animated: true, completion:nil)
+        
     }
     
     func showAlert(service:String)
@@ -66,8 +70,6 @@ class TwitterShareViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion:nil)
     }
-    
-    
     
     func sideMenus()
     {
