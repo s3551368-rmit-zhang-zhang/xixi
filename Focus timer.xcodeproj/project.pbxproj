@@ -12,13 +12,16 @@
 		710A42AD1F4FD1E700B18F6D /* TwitterShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */; };
 		710A42AF1F4FD1FA00B18F6D /* FacebookShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42AE1F4FD1FA00B18F6D /* FacebookShareViewController.swift */; };
 		710A42B11F4FF15000B18F6D /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A42B01F4FF15000B18F6D /* 12.png */; };
-		710A42B31F4FFAAB00B18F6D /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 710A42B21F4FFAAB00B18F6D /* 1.mp3 */; };
 		712F68F21F46D49100E12B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F68F11F46D49100E12B4F /* AppDelegate.swift */; };
 		712F68F71F46D49100E12B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68F51F46D49100E12B4F /* Main.storyboard */; };
 		712F68F91F46D49100E12B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712F68F81F46D49100E12B4F /* Assets.xcassets */; };
 		712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */; };
 		712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69061F46D49100E12B4F /* Focus_timerTests.swift */; };
 		712F69121F46D49100E12B4F /* Focus_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69111F46D49100E12B4F /* Focus_timerUITests.swift */; };
+		713F9AA81F517EFA0039931A /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 713F9AA71F517EFA0039931A /* 1.mp3 */; };
+		713F9AB21F51879A0039931A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713F9AAF1F5187800039931A /* Charts.framework */; };
+		713F9AB31F51879A0039931A /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 713F9AAF1F5187800039931A /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		713F9AB71F518C1E0039931A /* MonthReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */; };
 		7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */; };
 		7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E32C1F4EAB700063A7F5 /* ViewController.swift */; };
 		7186E3311F4EF4270063A7F5 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */; };
@@ -40,6 +43,27 @@
 			remoteGlobalIDString = 712F68ED1F46D49100E12B4F;
 			remoteInfo = "Focus timer";
 		};
+		713F9AAE1F5187800039931A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		713F9AB01F5187800039931A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		713F9AB41F51879A0039931A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				713F9AB31F51879A0039931A /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,7 +86,6 @@
 		710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterShareViewController.swift; sourceTree = "<group>"; };
 		710A42AE1F4FD1FA00B18F6D /* FacebookShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookShareViewController.swift; sourceTree = "<group>"; };
 		710A42B01F4FF15000B18F6D /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 12.png; path = ../12.png; sourceTree = "<group>"; };
-		710A42B21F4FFAAB00B18F6D /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 		712F68EE1F46D49100E12B4F /* Focus timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Focus timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712F68F11F46D49100E12B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		712F68F61F46D49100E12B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +98,9 @@
 		712F690D1F46D49100E12B4F /* Focus timerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus timerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712F69111F46D49100E12B4F /* Focus_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_timerUITests.swift; sourceTree = "<group>"; };
 		712F69131F46D49100E12B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713F9AA71F517EFA0039931A /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		713F9AA91F51877F0039931A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthReviewViewController.swift; sourceTree = "<group>"; };
 		7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Focus timer-Bridging-Header.h"; sourceTree = "<group>"; };
 		7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -87,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713F9AB21F51879A0039931A /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +148,7 @@
 		712F68E51F46D49100E12B4F = {
 			isa = PBXGroup;
 			children = (
+				713F9AA91F51877F0039931A /* Charts.xcodeproj */,
 				712F68F01F46D49100E12B4F /* Focus timer */,
 				712F69051F46D49100E12B4F /* Focus timerTests */,
 				712F69101F46D49100E12B4F /* Focus timerUITests */,
@@ -147,6 +176,7 @@
 				7186E32C1F4EAB700063A7F5 /* ViewController.swift */,
 				710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */,
 				71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */,
+				713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */,
 				710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */,
 				710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */,
 				7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */,
@@ -154,7 +184,7 @@
 				7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */,
 				7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */,
 				710A42B01F4FF15000B18F6D /* 12.png */,
-				710A42B21F4FFAAB00B18F6D /* 1.mp3 */,
+				713F9AA71F517EFA0039931A /* 1.mp3 */,
 			);
 			path = "Focus timer";
 			sourceTree = "<group>";
@@ -177,6 +207,15 @@
 			path = "Focus timerUITests";
 			sourceTree = "<group>";
 		};
+		713F9AAA1F51877F0039931A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				713F9AAF1F5187800039931A /* Charts.framework */,
+				713F9AB11F5187800039931A /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +231,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				713F9AB51F51879A0039931A /* PBXTargetDependency */,
 			);
 			name = "Focus timer";
 			productName = "Focus timer";
@@ -272,6 +312,12 @@
 			mainGroup = 712F68E51F46D49100E12B4F;
 			productRefGroup = 712F68EF1F46D49100E12B4F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 713F9AAA1F51877F0039931A /* Products */;
+					ProjectRef = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				712F68ED1F46D49100E12B4F /* Focus timer */,
@@ -280,6 +326,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		713F9AAF1F5187800039931A /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 713F9AAE1F5187800039931A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		713F9AB11F5187800039931A /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 713F9AB01F5187800039931A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		712F68EC1F46D49100E12B4F /* Resources */ = {
@@ -290,7 +353,7 @@
 				712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */,
 				712F68F91F46D49100E12B4F /* Assets.xcassets in Resources */,
 				712F68F71F46D49100E12B4F /* Main.storyboard in Resources */,
-				710A42B31F4FFAAB00B18F6D /* 1.mp3 in Resources */,
+				713F9AA81F517EFA0039931A /* 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +387,7 @@
 				710A42AD1F4FD1E700B18F6D /* TwitterShareViewController.swift in Sources */,
 				7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */,
 				7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */,
+				713F9AB71F518C1E0039931A /* MonthReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +419,11 @@
 			isa = PBXTargetDependency;
 			target = 712F68ED1F46D49100E12B4F /* Focus timer */;
 			targetProxy = 712F690E1F46D49100E12B4F /* PBXContainerItemProxy */;
+		};
+		713F9AB51F51879A0039931A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 713F9AB41F51879A0039931A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

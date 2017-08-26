@@ -50,7 +50,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOCUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZH-R6-cG8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZH-R6-cG8">
                                                     <rect key="frame" x="8" y="13" width="60" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -342,7 +342,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOCUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFD-81-M4V">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFD-81-M4V">
                                                     <rect key="frame" x="76" y="11" width="57" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -411,10 +411,10 @@
             </objects>
             <point key="canvasLocation" x="4574" y="2331"/>
         </scene>
-        <!--View Controller-->
+        <!--Month Review View Controller-->
         <scene sceneID="H8w-Ba-eRn">
             <objects>
-                <viewController id="W9A-m9-PWU" sceneMemberID="viewController">
+                <viewController id="W9A-m9-PWU" customClass="MonthReviewViewController" customModule="Focus_timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FjV-zC-qz8"/>
                         <viewControllerLayoutGuide type="bottom" id="dTF-s0-Uoj"/>
@@ -422,6 +422,13 @@
                     <view key="view" contentMode="scaleToFill" id="O8H-FO-3gC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-2M-jod" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
@@ -431,10 +438,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="lineChart" destination="wdf-2M-jod" id="6Jg-0w-yPj"/>
+                        <outlet property="shareButton" destination="rYi-ee-cPJ" id="pNc-uj-rXA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6U-jr-Zhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5922" y="4820"/>
+            <point key="canvasLocation" x="5921.739130434783" y="4819.5652173913049"/>
         </scene>
         <!--Week Result View Controller-->
         <scene sceneID="pcu-Yp-A72">
@@ -447,6 +458,13 @@
                     <view key="view" contentMode="scaleToFill" id="MWd-vl-2UP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Z7-mR-sUN" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
@@ -456,6 +474,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="lineChart" destination="6Z7-mR-sUN" id="QfI-nR-rfr"/>
+                        <outlet property="shareButton" destination="BUS-Wd-EUA" id="ZXL-8V-da1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUd-wx-aYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -838,11 +860,11 @@
             </objects>
             <point key="canvasLocation" x="4374" y="3933"/>
         </scene>
-        <!--Item 1-->
+        <!--WEEKLY-->
         <scene sceneID="FXe-9V-nYu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7D9-WQ-7jk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="8sQ-iH-8NH"/>
+                    <tabBarItem key="tabBarItem" title="WEEKLY" image="weekly" id="8sQ-iH-8NH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GTT-Rf-0RB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -857,11 +879,11 @@
             </objects>
             <point key="canvasLocation" x="5001" y="3933"/>
         </scene>
-        <!--Item 2-->
+        <!--MONTHLY-->
         <scene sceneID="gar-7g-gjw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bkE-jc-W7r" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="FCC-ZV-XR2"/>
+                    <tabBarItem key="tabBarItem" title="MONTHLY" image="monthly" id="FCC-ZV-XR2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Fy-Dc-xvQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -891,10 +913,12 @@
         <image name="WechatIMG6 1" width="230" height="396"/>
         <image name="bench-accounting-49909 (1)" width="341" height="441"/>
         <image name="facebook-logo-social-media-communication-3d34f264c9712ce4-24x24" width="24" height="24"/>
+        <image name="monthly" width="24" height="24"/>
         <image name="twitter-logo-social-media-communication-30cbadc624bdf9ee-24x24" width="24" height="24"/>
+        <image name="weekly" width="24" height="24"/>
         <image name="屏幕快照 2017-08-14 下午11.40.42" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JJx-G1-ylq"/>
+        <segue reference="1ev-za-z8L"/>
     </inferredMetricsTieBreakers>
 </document>
