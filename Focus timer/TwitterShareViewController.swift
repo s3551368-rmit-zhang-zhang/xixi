@@ -11,13 +11,24 @@ import Social
 
 class TwitterShareViewController: UIViewController {
     
+    @IBOutlet weak var dateLabel: UILabel!
    
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sideMenus()
+        
+        let date = Date()
+       
+        let calendar = Calendar.current
+        
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        dateLabel.text = String("\(day).\(month).\(year)")
         // Do any additional setup after loading the view.
     }
     

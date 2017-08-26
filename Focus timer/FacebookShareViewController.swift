@@ -10,12 +10,23 @@ import UIKit
 import Social
 class FacebookShareViewController: UIViewController {
 
+    
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         sideMenus()
+        let date = Date()
+        
+        let calendar = Calendar.current
+        
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        dateLabel.text = String("\(day).\(month).\(year)")
         
         // Do any additional setup after loading the view.
     }

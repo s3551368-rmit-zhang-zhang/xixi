@@ -17,68 +17,22 @@
             endingLineNumber = "21"
             landmarkName = "ViewTwo"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Focus_timer.ViewTwo.Array.getter : Swift.Array&lt;Swift.String&gt;"
-                  moduleName = "Focus timer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer/ViewTwo.swift"
-                  timestampString = "525253627.935639"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Focus_timer.ViewTwo.Array.setter : Swift.Array&lt;Swift.String&gt;"
-                  moduleName = "Focus timer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer/ViewTwo.swift"
-                  timestampString = "525253627.936739"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "65">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Focus_timer.ViewTwo.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Focus_timer.ViewTwo"
-                  moduleName = "Focus timer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer/ViewTwo.swift"
-                  timestampString = "525253627.937796"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "247">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Focus_timer.ViewTwo.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Focus_timer.ViewTwo&gt;"
-                  moduleName = "Focus timer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer/ViewTwo.swift"
-                  timestampString = "525253627.938852"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "167">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Focus timer/TwitterShareViewController.swift"
+            timestampString = "525433651.271867"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
