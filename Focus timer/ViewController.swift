@@ -23,6 +23,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var stopOutlet: UIButton!
     
+    @IBOutlet weak var focusLabel: UILabel!
     
     var sec = 1500
     
@@ -37,6 +38,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         sideMenus()
         pickerView.delegate = self
         pickerView.dataSource = self
+        startOutlet.isHidden = false
+        focusLabel.isHidden = true
         
         do
         {
@@ -77,6 +80,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func startAction(_ sender: Any)
     {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
+        startOutlet.isHidden = true
+        focusLabel.isHidden = false
         audioPlayer.play()
     }
     
@@ -96,6 +101,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func stopAction(_ sender: Any)
     {
+        startOutlet.isHidden = false
+        focusLabel.isHidden = true
         timer.invalidate()
         sec = 1500
         Label.text = "25:00"

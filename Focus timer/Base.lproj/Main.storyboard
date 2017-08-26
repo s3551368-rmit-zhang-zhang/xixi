@@ -292,6 +292,13 @@
                                 <rect key="frame" x="115" y="679" width="185" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KEEP FOCUSING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4Q-bQ-e2m">
+                                <rect key="frame" x="141" y="550" width="129" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -305,6 +312,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="Label" destination="xPQ-t1-jCf" id="8Ts-5h-7L8"/>
+                        <outlet property="focusLabel" destination="t4Q-bQ-e2m" id="6zE-vH-Adj"/>
                         <outlet property="menuButton" destination="Pes-tZ-dLB" id="yMQ-X5-HGm"/>
                         <outlet property="pickerView" destination="s03-nI-vR0" id="lhh-CO-QU3"/>
                         <outlet property="shareButton" destination="e4o-9k-jFZ" id="YKT-fg-md4"/>
@@ -314,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOV-DT-2Kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="3099"/>
+            <point key="canvasLocation" x="2256.521739130435" y="3097.0108695652175"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="VXB-Ke-sX4">
