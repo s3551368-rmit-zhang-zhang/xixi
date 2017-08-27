@@ -40,6 +40,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         pickerView.dataSource = self
         startOutlet.isHidden = false
         focusLabel.isHidden = true
+        menuButton.isEnabled = true
+        shareButton.isEnabled = true
         
         do
         {
@@ -83,6 +85,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         startOutlet.isHidden = true
         focusLabel.isHidden = false
         audioPlayer.play()
+        menuButton.isEnabled = false
+        shareButton.isEnabled = false
     }
     
     func counter()
@@ -107,6 +111,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         sec = 1500
         Label.text = "25:00"
         audioPlayer.stop()
+        menuButton.isEnabled = true
+        shareButton.isEnabled = true
     }
     
     
