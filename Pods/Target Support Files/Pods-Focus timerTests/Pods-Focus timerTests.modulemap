@@ -1,0 +1,6 @@
+framework module Pods_Focus_timerTests {
+  umbrella header "Pods-Focus timerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

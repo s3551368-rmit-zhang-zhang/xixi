@@ -48,6 +48,16 @@
                ReferencedContainer = "container:Focus timer.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "71E63A0F1F52B4CA009F84F2"
+               BuildableName = "Focus timerUITests2.xctest"
+               BlueprintName = "Focus timerUITests2"
+               ReferencedContainer = "container:Focus timer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

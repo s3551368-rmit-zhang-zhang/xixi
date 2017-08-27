@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CDDEA009469D0E699CE15D9 /* Pods_Focus_timerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D392EFB71B97BFA93376C2FF /* Pods_Focus_timerTests.framework */; };
+		5B5F4798B0C115ED9229BAB5 /* Pods_Focus_timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5096CB59FE13E69A9F05E9 /* Pods_Focus_timer.framework */; };
 		710A42A81F4FAEDD00B18F6D /* BackGroundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */; };
 		710A42AA1F4FB5D300B18F6D /* AboutFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */; };
 		710A42AD1F4FD1E700B18F6D /* TwitterShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */; };
@@ -19,13 +21,12 @@
 		712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69061F46D49100E12B4F /* Focus_timerTests.swift */; };
 		712F69121F46D49100E12B4F /* Focus_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69111F46D49100E12B4F /* Focus_timerUITests.swift */; };
 		713F9AA81F517EFA0039931A /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 713F9AA71F517EFA0039931A /* 1.mp3 */; };
-		713F9AB21F51879A0039931A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713F9AAF1F5187800039931A /* Charts.framework */; };
-		713F9AB31F51879A0039931A /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 713F9AAF1F5187800039931A /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		713F9AB71F518C1E0039931A /* MonthReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */; };
 		7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */; };
 		7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E32C1F4EAB700063A7F5 /* ViewController.swift */; };
 		7186E3311F4EF4270063A7F5 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */; };
 		71C1E3661F5142DE00794ADA /* WeekResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */; };
+		F956686CC2701B9AD0DD046D /* Pods_Focus_timerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2A3E9CDCE616EF22CD3A02 /* Pods_Focus_timerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,26 +44,12 @@
 			remoteGlobalIDString = 712F68ED1F46D49100E12B4F;
 			remoteInfo = "Focus timer";
 		};
-		713F9AAE1F5187800039931A /* PBXContainerItemProxy */ = {
+		71E63A151F52B4CA009F84F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F241D8110E600722320;
-			remoteInfo = Charts;
-		};
-		713F9AB01F5187800039931A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F2E1D8110E600722320;
-			remoteInfo = ChartsTests;
-		};
-		713F9AB41F51879A0039931A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
+			containerPortal = 712F68E61F46D49100E12B4F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 06165F231D8110E600722320;
-			remoteInfo = Charts;
+			remoteGlobalIDString = 712F68ED1F46D49100E12B4F;
+			remoteInfo = "Focus timer";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -73,7 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				713F9AB31F51879A0039931A /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +67,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B2A3E9CDCE616EF22CD3A02 /* Pods_Focus_timerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_timerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5096CB59FE13E69A9F05E9 /* Pods_Focus_timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E1BF62FA1225B36C237601 /* Pods-Focus timerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timerTests/Pods-Focus timerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		58ED234FD17AB18535DEB510 /* Pods-Focus timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timer/Pods-Focus timer.debug.xcconfig"; sourceTree = "<group>"; };
 		710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundsViewController.swift; sourceTree = "<group>"; };
 		710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutFocusViewController.swift; sourceTree = "<group>"; };
 		710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterShareViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +89,6 @@
 		712F69111F46D49100E12B4F /* Focus_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_timerUITests.swift; sourceTree = "<group>"; };
 		712F69131F46D49100E12B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		713F9AA71F517EFA0039931A /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
-		713F9AA91F51877F0039931A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthReviewViewController.swift; sourceTree = "<group>"; };
 		7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Focus timer-Bridging-Header.h"; sourceTree = "<group>"; };
 		7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -107,6 +96,12 @@
 		7186E32C1F4EAB700063A7F5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekResultViewController.swift; sourceTree = "<group>"; };
+		71E63A101F52B4CA009F84F2 /* Focus timerUITests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus timerUITests2.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81332EDDE7A99CDEE0C795E1 /* Pods-Focus timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timer/Pods-Focus timer.release.xcconfig"; sourceTree = "<group>"; };
+		A3E9754F37FC3C82421B794E /* Pods-Focus timerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timerTests/Pods-Focus timerTests.release.xcconfig"; sourceTree = "<group>"; };
+		D392EFB71B97BFA93376C2FF /* Pods_Focus_timerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_timerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA58588942C01D52C6707E81 /* Pods-Focus timerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timerUITests/Pods-Focus timerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDCC48081E03F9B1A971194B /* Pods-Focus timerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timerUITests/Pods-Focus timerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713F9AB21F51879A0039931A /* Charts.framework in Frameworks */,
+				5B5F4798B0C115ED9229BAB5 /* Pods_Focus_timer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,10 +117,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDDEA009469D0E699CE15D9 /* Pods_Focus_timerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		712F690A1F46D49100E12B4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F956686CC2701B9AD0DD046D /* Pods_Focus_timerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71E63A0D1F52B4CA009F84F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,6 +139,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BA8E77CC693F474F004D7CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58ED234FD17AB18535DEB510 /* Pods-Focus timer.debug.xcconfig */,
+				81332EDDE7A99CDEE0C795E1 /* Pods-Focus timer.release.xcconfig */,
+				14E1BF62FA1225B36C237601 /* Pods-Focus timerTests.debug.xcconfig */,
+				A3E9754F37FC3C82421B794E /* Pods-Focus timerTests.release.xcconfig */,
+				EA58588942C01D52C6707E81 /* Pods-Focus timerUITests.debug.xcconfig */,
+				FDCC48081E03F9B1A971194B /* Pods-Focus timerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		709598569BAEA739E2C30520 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F5096CB59FE13E69A9F05E9 /* Pods_Focus_timer.framework */,
+				D392EFB71B97BFA93376C2FF /* Pods_Focus_timerTests.framework */,
+				0B2A3E9CDCE616EF22CD3A02 /* Pods_Focus_timerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		710A42AB1F4FB64700B18F6D /* Supporting file */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,11 +175,12 @@
 		712F68E51F46D49100E12B4F = {
 			isa = PBXGroup;
 			children = (
-				713F9AA91F51877F0039931A /* Charts.xcodeproj */,
 				712F68F01F46D49100E12B4F /* Focus timer */,
 				712F69051F46D49100E12B4F /* Focus timerTests */,
 				712F69101F46D49100E12B4F /* Focus timerUITests */,
 				712F68EF1F46D49100E12B4F /* Products */,
+				0BA8E77CC693F474F004D7CE /* Pods */,
+				709598569BAEA739E2C30520 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +190,7 @@
 				712F68EE1F46D49100E12B4F /* Focus timer.app */,
 				712F69021F46D49100E12B4F /* Focus timerTests.xctest */,
 				712F690D1F46D49100E12B4F /* Focus timerUITests.xctest */,
+				71E63A101F52B4CA009F84F2 /* Focus timerUITests2.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,15 +236,6 @@
 			path = "Focus timerUITests";
 			sourceTree = "<group>";
 		};
-		713F9AAA1F51877F0039931A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				713F9AAF1F5187800039931A /* Charts.framework */,
-				713F9AB11F5187800039931A /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,15 +243,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 712F69161F46D49100E12B4F /* Build configuration list for PBXNativeTarget "Focus timer" */;
 			buildPhases = (
+				2C59EA74AB9FC8004B19F2EE /* [CP] Check Pods Manifest.lock */,
 				712F68EA1F46D49100E12B4F /* Sources */,
 				712F68EB1F46D49100E12B4F /* Frameworks */,
 				712F68EC1F46D49100E12B4F /* Resources */,
 				71C1E3641F51428D00794ADA /* Embed Frameworks */,
+				504E257D64C0C19B166013DC /* [CP] Embed Pods Frameworks */,
+				61628D20EA01610E6ABFB155 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				713F9AB51F51879A0039931A /* PBXTargetDependency */,
 			);
 			name = "Focus timer";
 			productName = "Focus timer";
@@ -242,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 712F69191F46D49100E12B4F /* Build configuration list for PBXNativeTarget "Focus timerTests" */;
 			buildPhases = (
+				B5333BEA9D307D0A21A00D37 /* [CP] Check Pods Manifest.lock */,
 				712F68FE1F46D49100E12B4F /* Sources */,
 				712F68FF1F46D49100E12B4F /* Frameworks */,
 				712F69001F46D49100E12B4F /* Resources */,
+				B1A798F372161521BF4EE903 /* [CP] Embed Pods Frameworks */,
+				A14683552091162782FE23EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 712F691C1F46D49100E12B4F /* Build configuration list for PBXNativeTarget "Focus timerUITests" */;
 			buildPhases = (
+				A11CE0471A50A6308730ED6F /* [CP] Check Pods Manifest.lock */,
 				712F69091F46D49100E12B4F /* Sources */,
 				712F690A1F46D49100E12B4F /* Frameworks */,
 				712F690B1F46D49100E12B4F /* Resources */,
+				E1E1421894BDDE556C33E2ED /* [CP] Embed Pods Frameworks */,
+				BBA240565ABDE918020B6DDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +300,24 @@
 			name = "Focus timerUITests";
 			productName = "Focus timerUITests";
 			productReference = 712F690D1F46D49100E12B4F /* Focus timerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		71E63A0F1F52B4CA009F84F2 /* Focus timerUITests2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71E63A191F52B4CA009F84F2 /* Build configuration list for PBXNativeTarget "Focus timerUITests2" */;
+			buildPhases = (
+				71E63A0C1F52B4CA009F84F2 /* Sources */,
+				71E63A0D1F52B4CA009F84F2 /* Frameworks */,
+				71E63A0E1F52B4CA009F84F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71E63A161F52B4CA009F84F2 /* PBXTargetDependency */,
+			);
+			name = "Focus timerUITests2";
+			productName = "Focus timerUITests2";
+			productReference = 71E63A101F52B4CA009F84F2 /* Focus timerUITests2.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -299,6 +345,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 712F68ED1F46D49100E12B4F;
 					};
+					71E63A0F1F52B4CA009F84F2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 712F68ED1F46D49100E12B4F;
+					};
 				};
 			};
 			buildConfigurationList = 712F68E91F46D49100E12B4F /* Build configuration list for PBXProject "Focus timer" */;
@@ -312,37 +363,15 @@
 			mainGroup = 712F68E51F46D49100E12B4F;
 			productRefGroup = 712F68EF1F46D49100E12B4F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 713F9AAA1F51877F0039931A /* Products */;
-					ProjectRef = 713F9AA91F51877F0039931A /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				712F68ED1F46D49100E12B4F /* Focus timer */,
 				712F69011F46D49100E12B4F /* Focus timerTests */,
 				712F690C1F46D49100E12B4F /* Focus timerUITests */,
+				71E63A0F1F52B4CA009F84F2 /* Focus timerUITests2 */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		713F9AAF1F5187800039931A /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 713F9AAE1F5187800039931A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		713F9AB11F5187800039931A /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 713F9AB01F5187800039931A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		712F68EC1F46D49100E12B4F /* Resources */ = {
@@ -371,7 +400,164 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71E63A0E1F52B4CA009F84F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C59EA74AB9FC8004B19F2EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus timer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		504E257D64C0C19B166013DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Focus timer/Pods-Focus timer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Focus timer/Pods-Focus timer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61628D20EA01610E6ABFB155 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Focus timer/Pods-Focus timer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A11CE0471A50A6308730ED6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus timerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A14683552091162782FE23EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Focus timerTests/Pods-Focus timerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A798F372161521BF4EE903 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Focus timerTests/Pods-Focus timerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5333BEA9D307D0A21A00D37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus timerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA240565ABDE918020B6DDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Focus timerUITests/Pods-Focus timerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1E1421894BDDE556C33E2ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Focus timerUITests/Pods-Focus timerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		712F68EA1F46D49100E12B4F /* Sources */ = {
@@ -407,6 +593,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71E63A0C1F52B4CA009F84F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -420,10 +613,10 @@
 			target = 712F68ED1F46D49100E12B4F /* Focus timer */;
 			targetProxy = 712F690E1F46D49100E12B4F /* PBXContainerItemProxy */;
 		};
-		713F9AB51F51879A0039931A /* PBXTargetDependency */ = {
+		71E63A161F52B4CA009F84F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Charts;
-			targetProxy = 713F9AB41F51879A0039931A /* PBXContainerItemProxy */;
+			target = 712F68ED1F46D49100E12B4F /* Focus timer */;
+			targetProxy = 71E63A151F52B4CA009F84F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -542,6 +735,7 @@
 		};
 		712F69171F46D49100E12B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58ED234FD17AB18535DEB510 /* Pods-Focus timer.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -558,6 +752,7 @@
 		};
 		712F69181F46D49100E12B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81332EDDE7A99CDEE0C795E1 /* Pods-Focus timer.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -573,6 +768,7 @@
 		};
 		712F691A1F46D49100E12B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E1BF62FA1225B36C237601 /* Pods-Focus timerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -587,6 +783,7 @@
 		};
 		712F691B1F46D49100E12B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3E9754F37FC3C82421B794E /* Pods-Focus timerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -601,6 +798,7 @@
 		};
 		712F691D1F46D49100E12B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA58588942C01D52C6707E81 /* Pods-Focus timerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Focus timerUITests/Info.plist";
@@ -614,11 +812,36 @@
 		};
 		712F691E1F46D49100E12B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDCC48081E03F9B1A971194B /* Pods-Focus timerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Focus timerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "s3551368-student.rmit.edu.au.Focus-timerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Focus timer";
+			};
+			name = Release;
+		};
+		71E63A171F52B4CA009F84F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Focus timerUITests2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s3551368-student.rmit.edu.au.Focus-timerUITests2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Focus timer";
+			};
+			name = Debug;
+		};
+		71E63A181F52B4CA009F84F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Focus timerUITests2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s3551368-student.rmit.edu.au.Focus-timerUITests2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Focus timer";
@@ -663,6 +886,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		71E63A191F52B4CA009F84F2 /* Build configuration list for PBXNativeTarget "Focus timerUITests2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71E63A171F52B4CA009F84F2 /* Debug */,
+				71E63A181F52B4CA009F84F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
