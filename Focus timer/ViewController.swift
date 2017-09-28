@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+
+
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
     @IBOutlet weak var pickerView: UIPickerView!
@@ -25,16 +27,25 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var focusLabel: UILabel!
     
+    @IBOutlet weak var backgroundView: UIImageView!{
+        didSet{
+            backgroundView.image = Image.image
+        }
+    }
+    
     var sec = 1500
     
     var timer = Timer()
     
     var Array = ["1500","1800","3600"]
+    
     var audioPlayer = AVAudioPlayer()
+    
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
+        
+        
         sideMenus()
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -45,14 +56,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         do
         {
-            let audioPath = Bundle.main.path(forResource: "1", ofType: ".mp3")
+            let audioPath = Music.music
             try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
         }
         catch
         {
          //ERROR
         }
+        super.viewDidLoad()
     }
+    
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {

@@ -11,7 +11,7 @@ import UIKit
 class MusicTableViewController: UITableViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +36,20 @@ class MusicTableViewController: UITableViewController {
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+    }
+    
+    @IBAction func alphaMusic(_ sender: Any) {
+        Music.music = Bundle.main.path(forResource: "1", ofType: ".mp3")
+    }
+    
+    
+    @IBAction func magicMusic(_ sender: Any) {
+        Music.music = Bundle.main.path(forResource: "快速入眠1", ofType: ".mp3")
+    }
+    
+    
+    @IBAction func misteryMusic(_ sender: Any) {
+          Music.music = Bundle.main.path(forResource: "内心平衡1", ofType: ".mp3")
     }
 
 

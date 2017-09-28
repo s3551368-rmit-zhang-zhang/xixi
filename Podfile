@@ -7,6 +7,7 @@ target 'Focus timer' do
 
   # Pods for Focus timer
   pod 'Charts', '~> 3.0.1'
+  pod 'SQLite.swift', '~> 0.11.3'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

@@ -14,6 +14,7 @@ class WeekResultViewController: UIViewController{
     
     @IBOutlet weak var lineChart: LineChartView!
     
+
     var numbers : [Double] = [30,60,120,25,90,50,75]
     
     override func viewDidLoad() {

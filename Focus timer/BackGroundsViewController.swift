@@ -10,13 +10,15 @@ import UIKit
 
 class BackGroundsViewController: UIViewController {
     
+    @IBOutlet weak var image: UIImageView!
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        image.image = Image.image
         sideMenus()
-        // Do any additional setup after loading the view.
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,6 +38,19 @@ class BackGroundsViewController: UIViewController {
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+    }
+    
+    @IBAction func crystalButton(_ sender: UIButton) {
+        
+        image.image = UIImage(named:"1746b313b31e17a6065a86cee3e249f0")
+        Image.image = UIImage(named:"1746b313b31e17a6065a86cee3e249f0")!
+        
+    }
+    
+    @IBAction func marbleButton(_ sender: UIButton) {
+        
+        image.image = UIImage(named:"5b2fe7d91e05f57bce2f80b325cbe45e--white-iphone-background-white-wallpaper-iphone")
+        Image.image = UIImage(named:"5b2fe7d91e05f57bce2f80b325cbe45e--white-iphone-background-white-wallpaper-iphone")!
     }
     
     

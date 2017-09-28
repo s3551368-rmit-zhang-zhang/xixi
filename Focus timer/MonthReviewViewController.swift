@@ -13,7 +13,8 @@ class MonthReviewViewController: UIViewController {
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBOutlet weak var lineChart: LineChartView!
-    
+
+
     var numbers : [Double] = [30,60,120,25,90,50,75,95,120,220,280,90,80,60,110,110,100,120,150,160,170,180,290,20,30,50,80,200,80,95]
     
     override func viewDidLoad() {

@@ -15,6 +15,13 @@ class FacebookShareViewController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var background: UIImageView!
+        {
+        didSet{
+            background.image = Image.image
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

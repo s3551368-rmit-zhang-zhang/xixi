@@ -6,33 +6,43 @@
 	<dict>
 		<key>Charts.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Focus timer.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Focus timerTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Focus timerUITests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SQLite.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>59242B90658CA90EB431B391A250E0A6</key>
+		<key>6F9C62E779C6AC55D437254DFA030BD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9FF1A57C972F3295F3C2B7016E318015</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E13029EE21AD972AA883B97198D72091</key>
 		<dict>
 			<key>primary</key>
 			<true/>

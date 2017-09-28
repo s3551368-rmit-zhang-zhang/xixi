@@ -15,6 +15,12 @@ class TwitterShareViewController: UIViewController {
    
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    @IBOutlet weak var background: UIImageView!{
+        didSet{
+            background.image = Image.image
+        }
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
