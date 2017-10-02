@@ -24,6 +24,8 @@ class SQLite {
     
     let name = Expression<String>("name")
     
+    let type = Expression<String>("type")
+    
     func initialSQLite(){
         
         do{
@@ -42,8 +44,9 @@ class SQLite {
     func createTable(){
         
         let createTable = self.musicTable.create { (table) in
-            table.column(self.id, primaryKey: true)
+            table.column(self.id, primaryKey: .autoincrement)
             table.column(self.name, unique: true)
+            table.column(self.type)
         }
         
         do{
@@ -53,4 +56,59 @@ class SQLite {
             print(error)
         }
     }
+    
+    func insertMusic(name:String, type:String){
+        
+        let insert = self.musicTable.insert(self.name <- name, self.type <- type)
+        
+        do{
+           try self.database.run(insert)
+            print("Inserted music")
+        }
+        catch{
+            print(error)
+        }
+    }
+    
+    func listMusic(){
+        do {
+            let musics = try self.database.prepare(self.musicTable)
+            for music in musics{
+                print("musicId: \(music[self.id]), name: \(music[self.name]), type: \(music[self.type])")
+            }
+        }catch{
+            print(error)
+
+        }
+    }
+    func getIndex(id:Int) -> (String, String){
+       
+        var Nname = ""
+        var Ntype = ""
+        
+        let filter = musicTable.filter(self.id == id)
+        
+        do {
+            for music in try self.database.prepare(filter){
+                
+                Nname = music[name]
+                Ntype = music[type]
+                
+            }
+        }catch{
+            print(error)
+        }
+        return (Nname, Ntype)
+        
+    }
+    
+    func deletTable(){
+        do{
+            try self.database.run(musicTable.drop())
+            print("Deleted")
+        }catch{
+            print(error)
+        }
+    }
+    
 }

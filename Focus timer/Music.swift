@@ -7,6 +7,9 @@
 //
 
 import Foundation
+
 struct Music {
-    static var music =  Bundle.main.path(forResource: "1", ofType: ".mp3")
+    
+    static var music =  Bundle.main.path(forResource: "Alpha", ofType: ".mp3")
+    
 }

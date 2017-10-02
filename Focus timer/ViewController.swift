@@ -45,6 +45,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad()
     {
         SQLite.shared.createTable()
+        SQLite.shared.insertMusic(name: "Alpha", type: ".mp3")
+        SQLite.shared.insertMusic(name: "Magic", type: ".mp3")
+        SQLite.shared.insertMusic(name: "Mistery", type: ".mp3")
+        SQLite.shared.listMusic()
         sideMenus()
         pickerView.delegate = self
         pickerView.dataSource = self

@@ -12,9 +12,12 @@ class MusicTableViewController: UITableViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
+    @IBOutlet weak var Alpha: UIButton!
+    @IBOutlet weak var Magic: UIButton!
+    @IBOutlet weak var Mistery: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         sideMenus()
         // Do any additional setup after loading the view.
     }
@@ -38,18 +41,35 @@ class MusicTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func alphaMusic(_ sender: Any) {
-        Music.music = Bundle.main.path(forResource: "1", ofType: ".mp3")
+    
+    
+    @IBAction func alphaMusic(_ sender: UIButton) {
+        Music.music = Bundle.main.path(forResource: "Alpha", ofType: ".mp3")
+        
+        Alpha.backgroundColor = UIColor.lightGray
+        Magic.backgroundColor = UIColor.clear
+        Mistery.backgroundColor = UIColor.clear
+        
+        
     }
     
     
-    @IBAction func magicMusic(_ sender: Any) {
-        Music.music = Bundle.main.path(forResource: "快速入眠", ofType: ".mp3")
+    @IBAction func magicMusic(_ sender: UIButton) {
+        Music.music = Bundle.main.path(forResource: "Magic", ofType: ".mp3")
+        
+            Alpha.backgroundColor = UIColor.clear
+            Magic.backgroundColor = UIColor.lightGray
+            Mistery.backgroundColor = UIColor.clear
     }
     
     
-    @IBAction func misteryMusic(_ sender: Any) {
-          Music.music = Bundle.main.path(forResource: "内心平衡", ofType: ".mp3")
+    @IBAction func misteryMusic(_ sender: UIButton) {
+          Music.music = Bundle.main.path(forResource: "Mistery", ofType: ".mp3")
+        
+        Alpha.backgroundColor = UIColor.clear
+        Magic.backgroundColor = UIColor.clear
+        Mistery.backgroundColor = UIColor.lightGray
+   
     }
 
 
