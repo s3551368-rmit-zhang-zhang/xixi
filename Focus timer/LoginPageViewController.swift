@@ -61,18 +61,22 @@ class LoginPageViewController: UIViewController {
     
     @IBAction func signupButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "Insert user info", message:nil, preferredStyle: .alert)
+        
         alert.addTextField { (tf) in
-            tf.placeholder = "userId"
+            tf.placeholder = "UserId"
         }
         alert.addTextField { (tf) in
             tf.placeholder = "Password"
         }
         
-        let action = UIAlertAction(title: "Submite",  style: .default) {(_) in
+            let action = UIAlertAction(title: "Submite",  style: .default)
+            {(_) in
             guard let userId = alert.textFields?.first?.text,
                 let password = alert.textFields?.last?.text
                 else{return}
+            
             let inserUser = self.userInfoTable.insert(self.userId <- userId, self.password <- password)
+            
             do{
                 try self.database.run(inserUser)
                 print("Inserted user")
@@ -82,6 +86,7 @@ class LoginPageViewController: UIViewController {
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+        
     }
     
     func deletTable(){
