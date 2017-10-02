@@ -44,8 +44,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad()
     {
-        
-        
+        SQLite.shared.createTable()
         sideMenus()
         pickerView.delegate = self
         pickerView.dataSource = self

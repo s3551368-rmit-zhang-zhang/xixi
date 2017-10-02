@@ -44,12 +44,12 @@ class MusicTableViewController: UITableViewController {
     
     
     @IBAction func magicMusic(_ sender: Any) {
-        Music.music = Bundle.main.path(forResource: "快速入眠1", ofType: ".mp3")
+        Music.music = Bundle.main.path(forResource: "快速入眠", ofType: ".mp3")
     }
     
     
     @IBAction func misteryMusic(_ sender: Any) {
-          Music.music = Bundle.main.path(forResource: "内心平衡1", ofType: ".mp3")
+          Music.music = Bundle.main.path(forResource: "内心平衡", ofType: ".mp3")
     }
 
 

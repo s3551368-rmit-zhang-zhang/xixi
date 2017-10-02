@@ -9,15 +9,22 @@
 import Foundation
 import SQLite
 
-struct SQLite {
+class SQLite {
     
+    static let shared = SQLite()
+    
+    private init(){
+        self.initialSQLite()
+    }
     var database : Connection!
     
     let musicTable = Table("music")
     
     let id = Expression<Int>("id")
     
-    mutating func initialSQLite(){
+    let name = Expression<String>("name")
+    
+    func initialSQLite(){
         
         do{
             
@@ -34,5 +41,16 @@ struct SQLite {
     
     func createTable(){
         
+        let createTable = self.musicTable.create { (table) in
+            table.column(self.id, primaryKey: true)
+            table.column(self.name, unique: true)
+        }
+        
+        do{
+            try self.database.run(createTable)
+            print("Created Table")
+        }catch{
+            print(error)
+        }
     }
 }

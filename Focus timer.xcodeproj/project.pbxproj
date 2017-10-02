@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2464D76A1F80A3190036F600 /* 内心平静.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2464D7681F80A3190036F600 /* 内心平静.mp3 */; };
+		2464D76B1F80A3190036F600 /* 快速入眠.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2464D7691F80A3190036F600 /* 快速入眠.mp3 */; };
 		4CDDEA009469D0E699CE15D9 /* Pods_Focus_timerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D392EFB71B97BFA93376C2FF /* Pods_Focus_timerTests.framework */; };
 		5B5F4798B0C115ED9229BAB5 /* Pods_Focus_timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5096CB59FE13E69A9F05E9 /* Pods_Focus_timer.framework */; };
 		710A42A81F4FAEDD00B18F6D /* BackGroundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */; };
@@ -23,8 +25,6 @@
 		7150F07B1F7CA80300FD3665 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150F07A1F7CA80300FD3665 /* Background.swift */; };
 		7150F07D1F7CAC6E00FD3665 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7150F07C1F7CAC6E00FD3665 /* 1.mp3 */; };
 		7150F07F1F7CB0F800FD3665 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150F07E1F7CB0F800FD3665 /* Music.swift */; };
-		7150F0811F7CB1C100FD3665 /* 内心平衡1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7150F0801F7CB1C100FD3665 /* 内心平衡1.mp3 */; };
-		7150F0851F7CB37100FD3665 /* 快速入眠1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7150F0841F7CB37100FD3665 /* 快速入眠1.mp3 */; };
 		7150F08A1F7CBF9B00FD3665 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150F0891F7CBF9B00FD3665 /* SQLite.swift */; };
 		7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */; };
 		7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E32C1F4EAB700063A7F5 /* ViewController.swift */; };
@@ -74,6 +74,8 @@
 		0B2A3E9CDCE616EF22CD3A02 /* Pods_Focus_timerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_timerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5096CB59FE13E69A9F05E9 /* Pods_Focus_timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E1BF62FA1225B36C237601 /* Pods-Focus timerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timerTests/Pods-Focus timerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2464D7681F80A3190036F600 /* 内心平静.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "内心平静.mp3"; sourceTree = "<group>"; };
+		2464D7691F80A3190036F600 /* 快速入眠.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "快速入眠.mp3"; sourceTree = "<group>"; };
 		58ED234FD17AB18535DEB510 /* Pods-Focus timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timer/Pods-Focus timer.debug.xcconfig"; sourceTree = "<group>"; };
 		710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundsViewController.swift; sourceTree = "<group>"; };
 		710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutFocusViewController.swift; sourceTree = "<group>"; };
@@ -95,8 +97,6 @@
 		7150F07A1F7CA80300FD3665 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		7150F07C1F7CAC6E00FD3665 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 		7150F07E1F7CB0F800FD3665 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
-		7150F0801F7CB1C100FD3665 /* 内心平衡1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "内心平衡1.mp3"; sourceTree = "<group>"; };
-		7150F0841F7CB37100FD3665 /* 快速入眠1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "快速入眠1.mp3"; sourceTree = "<group>"; };
 		7150F0891F7CBF9B00FD3665 /* SQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
 		7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Focus timer-Bridging-Header.h"; sourceTree = "<group>"; };
 		7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 			children = (
 				712F68F81F46D49100E12B4F /* Assets.xcassets */,
 				7150F07C1F7CAC6E00FD3665 /* 1.mp3 */,
-				7150F0841F7CB37100FD3665 /* 快速入眠1.mp3 */,
-				7150F0801F7CB1C100FD3665 /* 内心平衡1.mp3 */,
+				2464D7681F80A3190036F600 /* 内心平静.mp3 */,
+				2464D7691F80A3190036F600 /* 快速入眠.mp3 */,
 				712F68F11F46D49100E12B4F /* AppDelegate.swift */,
 				712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */,
 				712F68FD1F46D49100E12B4F /* Info.plist */,
@@ -423,10 +423,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7150F07D1F7CAC6E00FD3665 /* 1.mp3 in Resources */,
-				7150F0811F7CB1C100FD3665 /* 内心平衡1.mp3 in Resources */,
+				2464D76B1F80A3190036F600 /* 快速入眠.mp3 in Resources */,
 				712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */,
-				7150F0851F7CB37100FD3665 /* 快速入眠1.mp3 in Resources */,
 				712F68F91F46D49100E12B4F /* Assets.xcassets in Resources */,
+				2464D76A1F80A3190036F600 /* 内心平静.mp3 in Resources */,
 				712F68F71F46D49100E12B4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
