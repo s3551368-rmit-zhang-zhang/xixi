@@ -23,11 +23,11 @@
 		712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69061F46D49100E12B4F /* Focus_timerTests.swift */; };
 		712F69121F46D49100E12B4F /* Focus_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69111F46D49100E12B4F /* Focus_timerUITests.swift */; };
 		713F9AB71F518C1E0039931A /* MonthReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */; };
+		714321021F834A3400073D32 /* PastEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714321011F834A3400073D32 /* PastEventsTableViewController.swift */; };
 		714B61841F82269E00A5671B /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B61831F82269E00A5671B /* LoginPageViewController.swift */; };
 		7150F07B1F7CA80300FD3665 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150F07A1F7CA80300FD3665 /* Background.swift */; };
 		7150F07D1F7CAC6E00FD3665 /* Alpha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7150F07C1F7CAC6E00FD3665 /* Alpha.mp3 */; };
 		7150F07F1F7CB0F800FD3665 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150F07E1F7CB0F800FD3665 /* Music.swift */; };
-		7150F08A1F7CBF9B00FD3665 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150F0891F7CBF9B00FD3665 /* SQLite.swift */; };
 		7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */; };
 		7186E32D1F4EAB700063A7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E32C1F4EAB700063A7F5 /* ViewController.swift */; };
 		7186E3311F4EF4270063A7F5 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */; };
@@ -97,11 +97,11 @@
 		712F69111F46D49100E12B4F /* Focus_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_timerUITests.swift; sourceTree = "<group>"; };
 		712F69131F46D49100E12B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthReviewViewController.swift; sourceTree = "<group>"; };
+		714321011F834A3400073D32 /* PastEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastEventsTableViewController.swift; sourceTree = "<group>"; };
 		714B61831F82269E00A5671B /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		7150F07A1F7CA80300FD3665 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		7150F07C1F7CAC6E00FD3665 /* Alpha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Alpha.mp3; sourceTree = "<group>"; };
 		7150F07E1F7CB0F800FD3665 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
-		7150F0891F7CBF9B00FD3665 /* SQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
 		7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Focus timer-Bridging-Header.h"; sourceTree = "<group>"; };
 		7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -164,12 +164,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		249F26BB1F832CF000832E8E /* coredata */ = {
+		249F26BB1F832CF000832E8E /* Coredata */ = {
 			isa = PBXGroup;
 			children = (
 				249F26B81F832C9A00832E8E /* dataModel.xcdatamodeld */,
 			);
-			name = coredata;
+			name = Coredata;
 			sourceTree = "<group>";
 		};
 		709598569BAEA739E2C30520 /* Frameworks */ = {
@@ -219,9 +219,8 @@
 		712F68F01F46D49100E12B4F /* Focus timer */ = {
 			isa = PBXGroup;
 			children = (
-				249F26BB1F832CF000832E8E /* coredata */,
+				249F26BB1F832CF000832E8E /* Coredata */,
 				714B61821F81E6FF00A5671B /* Songs */,
-				7150F0881F7CBF3800FD3665 /* SQLite */,
 				7150F0871F7CBC8C00FD3665 /* View */,
 				7150F0861F7CB62E00FD3665 /* Controller */,
 				7150F0791F7CA7EC00FD3665 /* Module */,
@@ -279,6 +278,7 @@
 				710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */,
 				710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */,
 				7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */,
+				714321011F834A3400073D32 /* PastEventsTableViewController.swift */,
 				7186E3291F4EA4660063A7F5 /* SWRevealViewController.m */,
 				7186E32A1F4EA4660063A7F5 /* SWRevealViewController.h */,
 				7186E3281F4EA4650063A7F5 /* Focus timer-Bridging-Header.h */,
@@ -292,14 +292,6 @@
 				712F68F51F46D49100E12B4F /* Main.storyboard */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		7150F0881F7CBF3800FD3665 /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-				7150F0891F7CBF9B00FD3665 /* SQLite.swift */,
-			);
-			name = SQLite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,9 +627,9 @@
 			files = (
 				710A42AF1F4FD1FA00B18F6D /* FacebookShareViewController.swift in Sources */,
 				7186E3311F4EF4270063A7F5 /* MusicTableViewController.swift in Sources */,
+				714321021F834A3400073D32 /* PastEventsTableViewController.swift in Sources */,
 				710A42AA1F4FB5D300B18F6D /* AboutFocusViewController.swift in Sources */,
 				71C1E3661F5142DE00794ADA /* WeekResultViewController.swift in Sources */,
-				7150F08A1F7CBF9B00FD3665 /* SQLite.swift in Sources */,
 				714B61841F82269E00A5671B /* LoginPageViewController.swift in Sources */,
 				710A42A81F4FAEDD00B18F6D /* BackGroundsViewController.swift in Sources */,
 				7150F07B1F7CA80300FD3665 /* Background.swift in Sources */,

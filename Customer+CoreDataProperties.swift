@@ -2,8 +2,9 @@
 //  Customer+CoreDataProperties.swift
 //  
 //
-//  Created by James zhang on 3/10/17.
+//  Created by Zhang Zhang on 10/3/17.
 //
+//  This file was automatically generated and should not be edited.
 //
 
 import Foundation
@@ -13,7 +14,7 @@ import CoreData
 extension Customer {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Customer> {
-        return NSFetchRequest<Customer>(entityName: "Customer")
+        return NSFetchRequest<Customer>(entityName: "Customer");
     }
 
     @NSManaged public var accountNum: String?
@@ -36,9 +37,5 @@ extension Customer {
 
     @objc(removeCustomerEvent:)
     @NSManaged public func removeFromCustomerEvent(_ values: NSSet)
-
-    func addCustomerEvent(event:customerEvent){
-        self.mutableSetValue(forKey: "customerEvent").add(event)
-    }
 
 }

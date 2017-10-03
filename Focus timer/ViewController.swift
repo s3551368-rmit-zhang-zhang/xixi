@@ -8,11 +8,11 @@
 
 import UIKit
 import AVFoundation
-
+import CoreData
 
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
-
+    let mContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var Label: UILabel!
@@ -33,7 +33,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
-    var sec = 1500
+    @IBOutlet weak var noteField: UITextField!
+    
+    var loginedCustomer : Customer?
+    
+    var PresetedSec = 1500
+    
+    var oriSec = 1500
     
     var timer = Timer()
     
@@ -44,11 +50,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad()
     {
-        SQLite.shared.createTable()
-        SQLite.shared.insertMusic(name: "Alpha", type: ".mp3")
-        SQLite.shared.insertMusic(name: "Magic", type: ".mp3")
-        SQLite.shared.insertMusic(name: "Mistery", type: ".mp3")
-        SQLite.shared.listMusic()
         sideMenus()
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -72,9 +73,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        sec = Int(Array[row])!
-        let minutes = Int(sec) / 60
-        let seconds = Int(sec) % 60
+        PresetedSec = Int(Array[row])!
+        oriSec = Int(Array[row])!
+        let minutes = Int(PresetedSec) / 60
+        let seconds = Int(PresetedSec) % 60
         return String(format: "%02i:%02i",minutes,seconds)
     }
     
@@ -89,9 +91,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        sec = Int(Array[row])!
-        let minutes = Int(sec) / 60
-        let seconds = Int(sec) % 60
+        PresetedSec = Int(Array[row])!
+        let minutes = Int(PresetedSec) / 60
+        let seconds = Int(PresetedSec) % 60
         Label.text = String(format: "%02i:%02i",minutes,seconds)
     }
 
@@ -107,12 +109,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func counter()
     {
-        sec -= 1
-        let minutes = Int(sec) / 60
-        let seconds = Int(sec) % 60
+        PresetedSec -= 1
+        oriSec = PresetedSec
+        let minutes = Int(PresetedSec) / 60
+        let seconds = Int(PresetedSec) % 60
         Label.text = String(format: "%02i:%02i",minutes,seconds)
         
-        if (sec == 0)
+        if (PresetedSec == 0)
         {
             timer.invalidate()
             audioPlayer.stop()
@@ -124,14 +127,54 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         startOutlet.isHidden = false
         focusLabel.isHidden = true
         timer.invalidate()
-        sec = 1500
+        PresetedSec = 1500
         Label.text = "25:00"
         audioPlayer.stop()
         menuButton.isEnabled = true
         shareButton.isEnabled = true
+        createEvent()
     }
     
-    
+    // !!!!!!!!!!!!
+    func createEvent(){
+        let account = "zeo"
+        let request:NSFetchRequest = Customer.fetchRequest()
+        let accountPredicate = NSPredicate(format:"accountNum =%@",account)
+        request.predicate = accountPredicate
+        request.fetchLimit = 1
+        request.fetchOffset = 0
+        
+        request.entity = NSEntityDescription.entity(forEntityName: "Customer", in: mContext)
+        
+        do {
+            let fetchedObjects:[AnyObject]? = try mContext.fetch(request)
+            
+            for c:Customer in fetchedObjects as![Customer] {
+                self.loginedCustomer = c
+            }
+        }catch {
+                fatalError("could not search：\(error)")
+    }
+         let event = NSEntityDescription.insertNewObject(forEntityName: "CustomerizeEvent", into: mContext) as! CustomerizeEvent
+         event.note = noteField.text
+         let gap =  PresetedSec - oriSec
+        print("TEST S \(oriSec) AND \(PresetedSec)")
+         print(gap)
+         event.timeLength = Int32.init(exactly: gap)!
+        
+         event.owner = loginedCustomer
+         loginedCustomer?.addToCustomerEvent(event)
+        
+        do{
+            try mContext.save()
+            print("save EVENT successfully")
+            print(event.note)
+            print(Int(event.timeLength))
+            print(event.owner?.accountNum)
+        }catch{
+            print("ERROR")
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
