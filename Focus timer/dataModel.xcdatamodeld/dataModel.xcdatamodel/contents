@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="accountNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="customerEvent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CustomerizeEvent" inverseName="owner" inverseEntity="CustomerizeEvent" syncable="YES"/>
+    </entity>
+    <entity name="CustomerizeEvent" representedClassName="CustomerizeEvent" syncable="YES" codeGenerationType="class">
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeLength" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="customerEvent" inverseEntity="Customer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Customer" positionX="-369" positionY="-12" width="128" height="88"/>
+        <element name="CustomerizeEvent" positionX="-54" positionY="9" width="128" height="88"/>
+    </elements>
+</model>

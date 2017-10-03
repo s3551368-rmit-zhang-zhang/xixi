@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Customer+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Customer+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CustomerizeEvent+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CustomerizeEvent+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:Focus timer.xcodeproj">
    </FileRef>
    <FileRef

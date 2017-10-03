@@ -7,34 +7,19 @@
 //
 
 import UIKit
-import SQLite
-class LoginPageViewController: UIViewController {
+import CoreData
+import Foundation
 
-    var database : Connection!
-    
-    let userInfoTable = Table("userInfo")
-    
-    let id = Expression<Int>("id")
-    
-    let userId = Expression<String>("userId")
-    
-    let password = Expression<String>("password")
+class LoginPageViewController: UIViewController {
+    let mContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+    @IBOutlet weak var AccountNum: UITextField!
+    @IBOutlet weak var Password: UITextField!
+    let c1 = Customer()
+    let e1 = CustomerizeEvent()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do{
-            
-            let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-            let fileUrl = documentDirectory.appendingPathComponent("userInfo").appendingPathExtension("sqlite3")
-            let database = try Connection(fileUrl.path)
-            self.database = database
-            
-        }catch {
-            print(error)
-        }
-        
-        self.createTable()
-       //self.deletTable()
+        c1.addToCustomerEvent(e1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,74 +27,105 @@ class LoginPageViewController: UIViewController {
         
     }
     
-    func createTable(){
-        
-        let createTable = self.userInfoTable.create { (table) in
-            table.column(self.id, primaryKey: .autoincrement)
-            table.column(self.userId, unique: true)
-            table.column(self.password)
-        }
-        
-        do{
-            try self.database.run(createTable)
-            print("Created Table")
-        }catch{
-            print(error)
-        }
-    }
-
+    
     
     @IBAction func signupButton(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Insert user info", message:nil, preferredStyle: .alert)
-        
-        alert.addTextField { (tf) in
-            tf.placeholder = "UserId"
-        }
-        alert.addTextField { (tf) in
-            tf.placeholder = "Password"
-        }
-        
-            let action = UIAlertAction(title: "Submite",  style: .default)
-            {(_) in
-            guard let userId = alert.textFields?.first?.text,
-                let password = alert.textFields?.last?.text
-                else{return}
-            
-            let inserUser = self.userInfoTable.insert(self.userId <- userId, self.password <- password)
+       
+        if !(AccountNum.text?.isEmpty)! && !(Password.text?.isEmpty)!{
+            print("TEST")
+            let customer = NSEntityDescription.insertNewObject(forEntityName: "Customer", into: mContext) as! Customer
+            customer.accountNum = AccountNum.text
+            customer.password = Password.text
             
             do{
-                try self.database.run(inserUser)
-                print("Inserted user")
+                try mContext.save()
+                print("save customer successfully")
             }catch{
-                print(error)
+                print("fail to save")
             }
         }
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func loginBtnClick(_ sender: Any) {
+        let fetchRequest : NSFetchRequest = Customer.fetchRequest()
+        fetchRequest.fetchLimit = 10
+        fetchRequest.fetchOffset = 0
+        
+        fetchRequest.entity = NSEntityDescription.entity(forEntityName: "Customer", in: mContext)
+        let testAccount = "aa"
+        fetchRequest.predicate = NSPredicate(format:"accountNum =%@",testAccount)
+        
+        do {
+            let fetchedObjects:[AnyObject]? = try mContext.fetch(fetchRequest)
+            for c:Customer in fetchedObjects as! [Customer]{
+               c.setValue("bb", forKey: "accountNum")
+            }
+        }catch {
+            fatalError("could not search：\(error)")
+        }
+        
+        do{
+            try mContext.save()
+            print("Change ID Successfully")
+        }catch{
+            print("Fail to change")
+        }
         
     }
-    
-    func deletTable(){
-        do{
-            try self.database.run(userInfoTable.drop())
-            print("Deleted")
-        }catch{
-            print(error)
-        }
-    }
-    
-    @IBAction func asndi(_ sender: UIButton) {
-        do {
-            let users = try self.database.prepare(self.userInfoTable)
-            for user in users{
-                print("userId: \(user[self.id]), email: \(user[self.userId]), password: \(user[self.password])")
-            }
-        }catch{
-            print(error)
-            
-        }
-    }
-
    
+    // read from coredata
+//    let fetchRequest : NSFetchRequest = Customer.fetchRequest()
+//    fetchRequest.fetchLimit = 10
+//    fetchRequest.fetchOffset = 0
+//    
+//    fetchRequest.entity = NSEntityDescription.entity(forEntityName: "Customer", in: mContext)
+//    //        fetchRequest.predicate = NSPredicate(format:"","")
+//    
+//    do {
+//    let fetchedObjects:[AnyObject]? = try mContext.fetch(fetchRequest)
+//    for c:Customer in fetchedObjects as! [Customer]{
+//    print(c.accountNum)
+//    print(c.password)
+//    }
+//    }catch {
+//    fatalError("could not search：\(error)")
+//    }
+//
+//  coredata delete
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        var dMovie:MovieViewModel?
+//        var dSess : SessionViewModel?
+//        var deleSeat : bookedSeatViewModel?
+//        let deleteBook:BookDeal = bookDealVMS[indexPath.row].getDeal()
+//        
+//        for m in movies{
+//            if m.movieName == deleteBook.movieName{
+//                dMovie = m
+//            }
+//        }
+//        
+//        dSess = SessionViewModel(session: (dMovie?.getSpecificSession(time: deleteBook.time!))!)
+//        deleSeat = bookedSeatViewModel(bookedSeat: (dSess?.getSpecificBookedSeat(seatNum: (deleteBook.seatNumber?.intValue)!))!)
+//        
+//        if editingStyle == UITableViewCellEditingStyle.delete {
+//            orderMovieTable.beginUpdates()
+//            do{
+//                
+//                context.delete(bookDealVMS[indexPath.row].getDeal())
+//                bookDealVMS.remove(at: indexPath.row)
+//                dSess?.removeBookedSeat((deleSeat?.getSeat())!)
+//                try context.save()
+//                print("delete successfully")
+//                
+//            }catch{
+//                print("CoreData delete data fail")
+//            }
+//            orderMovieTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+//            
+//        }
+//        orderMovieTable.endUpdates()
+//    }
+
+    
 
 }
