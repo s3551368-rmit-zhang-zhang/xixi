@@ -13,7 +13,7 @@ import AVFoundation
 
 class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
-    var accountnum = ""
+    var placementAnswer = 0
     
     let mContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     
@@ -41,13 +41,13 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var loginedCustomer : Customer?
     
-    var PresetedSec = 1500
+    var PresetedSec = 0
     
-    var oriSec = 1500
+    var oriSec = 0
     
     var timer = Timer()
     
-    var Array = ["1500","1800","3600"]
+    var Array = ["Please select focus time","25:00","30:00","60:00"]
     
     var audioPlayer = AVAudioPlayer()
     
@@ -61,7 +61,8 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         focusLabel.isHidden = true
         menuButton.isEnabled = true
         shareButton.isEnabled = true
-        
+        stopOutlet.isHidden = true
+        startOutlet.isHidden = true
         do
         {
             let audioPath = Music.music
@@ -77,11 +78,8 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        PresetedSec = Int(Array[row])!
-        oriSec = Int(Array[row])!
-        let minutes = Int(PresetedSec) / 60
-        let seconds = Int(PresetedSec) % 60
-        return String(format: "%02i:%02i",minutes,seconds)
+        
+        return Array[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
@@ -95,7 +93,30 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        PresetedSec = Int(Array[row])!
+        placementAnswer = row
+        if(placementAnswer == 1)
+        {
+            startOutlet.isHidden = false
+            PresetedSec = 1500
+            oriSec = 1500
+        }
+        else if(placementAnswer == 2)
+        {
+            startOutlet.isHidden = false
+            PresetedSec = 1800
+            oriSec = 1800
+        }
+        else if(placementAnswer == 3)
+        {
+            startOutlet.isHidden = false
+            PresetedSec = 3600
+            oriSec = 3600
+        }
+        else
+        {
+            startOutlet.isHidden = true
+        }
+
         let minutes = Int(PresetedSec) / 60
         let seconds = Int(PresetedSec) % 60
         Label.text = String(format: "%02i:%02i",minutes,seconds)
@@ -109,12 +130,13 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         audioPlayer.play()
         menuButton.isEnabled = false
         shareButton.isEnabled = false
+        stopOutlet.isHidden = false
     }
     
     func counter()
     {
         PresetedSec -= 1
-        oriSec = PresetedSec
+    
         let minutes = Int(PresetedSec) / 60
         let seconds = Int(PresetedSec) % 60
         Label.text = String(format: "%02i:%02i",minutes,seconds)
@@ -131,19 +153,17 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         startOutlet.isHidden = false
         focusLabel.isHidden = true
         timer.invalidate()
-        PresetedSec = 1500
         Label.text = "25:00"
         audioPlayer.stop()
         menuButton.isEnabled = true
         shareButton.isEnabled = true
         createEvent()
+        stopOutlet.isHidden = true
     }
     
-    // !!!!!!!!!!!!
     func createEvent(){
-        //let account = "zeo"
         let request:NSFetchRequest = Customer.fetchRequest()
-        let accountPredicate = NSPredicate(format:"accountNum =%@",accountnum)
+        let accountPredicate = NSPredicate(format:"accountNum =%@",AccountId.accuntnum)
         request.predicate = accountPredicate
         request.fetchLimit = 1
         request.fetchOffset = 0
@@ -161,7 +181,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
         let event = NSEntityDescription.insertNewObject(forEntityName: "CustomerizeEvent", into: mContext) as! CustomerizeEvent
         event.note = noteField.text
-        let gap =  PresetedSec - oriSec
+        let gap =  oriSec - PresetedSec
         print (gap)
         event.timeLength = Int32.init(exactly: gap)!
         
