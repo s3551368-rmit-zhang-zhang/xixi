@@ -15,6 +15,9 @@ class LoginPageViewController: UIViewController {
     @IBOutlet weak var AccountNum: UITextField!
     @IBOutlet weak var Password: UITextField!
     
+    var account = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,10 +64,17 @@ class LoginPageViewController: UIViewController {
             }catch {
                 fatalError("could not search：\(error)")
             }
+            account = AccountNum.text!
             self.performSegue(withIdentifier: "logined", sender: nil)
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoDetail" {
+            if let toViewController = segue.destination as? homePageViewController {
+                toViewController.accountnum = "test"
+            }
+        }
+}
 //    @IBAction func loginBtnClick(_ sender: Any) {
 //        let fetchRequest : NSFetchRequest = Customer.fetchRequest()
 //        fetchRequest.fetchLimit = 10

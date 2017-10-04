@@ -1,24 +1,28 @@
 //
-//  ViewController.swift
+//  homePageViewController.swift
 //  Focus timer
 //
-//  Created by Zhang Zhang on 8/24/17.
+//  Created by Zhang Zhang on 10/4/17.
 //  Copyright © 2017 Zhang Zhang. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 import CoreData
+import Foundation
+import AVFoundation
 
-
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    var accountnum = ""
+    
     let mContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+    
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var Label: UILabel!
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
-   
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var startOutlet: UIButton!
@@ -65,7 +69,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         catch
         {
-         //ERROR
+            //ERROR
         }
         super.viewDidLoad()
     }
@@ -96,10 +100,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let seconds = Int(PresetedSec) % 60
         Label.text = String(format: "%02i:%02i",minutes,seconds)
     }
-
+    
     @IBAction func startAction(_ sender: Any)
     {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(homePageViewController.counter), userInfo: nil, repeats: true)
         startOutlet.isHidden = true
         focusLabel.isHidden = false
         audioPlayer.play()
@@ -137,9 +141,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     // !!!!!!!!!!!!
     func createEvent(){
-        let account = "zeo"
+        //let account = "zeo"
         let request:NSFetchRequest = Customer.fetchRequest()
-        let accountPredicate = NSPredicate(format:"accountNum =%@",account)
+        let accountPredicate = NSPredicate(format:"accountNum =%@",accountnum)
         request.predicate = accountPredicate
         request.fetchLimit = 1
         request.fetchOffset = 0
@@ -153,17 +157,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 self.loginedCustomer = c
             }
         }catch {
-                fatalError("could not search：\(error)")
-    }
-         let event = NSEntityDescription.insertNewObject(forEntityName: "CustomerizeEvent", into: mContext) as! CustomerizeEvent
-         event.note = noteField.text
-         let gap =  PresetedSec - oriSec
-        print("TEST S \(oriSec) AND \(PresetedSec)")
-         print(gap)
-         event.timeLength = Int32.init(exactly: gap)!
+            fatalError("could not search：\(error)")
+        }
+        let event = NSEntityDescription.insertNewObject(forEntityName: "CustomerizeEvent", into: mContext) as! CustomerizeEvent
+        event.note = noteField.text
+        let gap =  PresetedSec - oriSec
+        print (gap)
+        event.timeLength = Int32.init(exactly: gap)!
         
-         event.owner = loginedCustomer
-         loginedCustomer?.addToCustomerEvent(event)
+        event.owner = loginedCustomer
+        loginedCustomer?.addToCustomerEvent(event)
         
         do{
             try mContext.save()
@@ -198,6 +201,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
+    
 
 
 }
