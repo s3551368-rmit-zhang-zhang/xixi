@@ -190,6 +190,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         event.timeLength = Int32.init(exactly: gap)!
         
         event.owner = loginedCustomer
+        
         loginedCustomer?.addToCustomerEvent(event)
         
         do{

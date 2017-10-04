@@ -9,4 +9,5 @@
 import Foundation
 struct AccountId {
     static var accuntnum:String = ""
+    
 }

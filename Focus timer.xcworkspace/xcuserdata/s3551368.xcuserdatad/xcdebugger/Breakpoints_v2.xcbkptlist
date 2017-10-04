@@ -113,5 +113,98 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Focus timer/PastEventsTableViewController.swift"
+            timestampString = "528801239.161997"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "PastEventsTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.PastEventsTableViewController.event.getter : Swift.Array&lt;Focus_timer.CustomerizeEvent&gt;"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer%202/Focus%20timer/PastEventsTableViewController.swift"
+                  timestampString = "528801765.952327"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.PastEventsTableViewController.event.setter : Swift.Array&lt;Focus_timer.CustomerizeEvent&gt;"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer%202/Focus%20timer/PastEventsTableViewController.swift"
+                  timestampString = "528801765.953513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.PastEventsTableViewController.init (style : __C.UITableViewStyle) -&gt; Focus_timer.PastEventsTableViewController"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer%202/Focus%20timer/PastEventsTableViewController.swift"
+                  timestampString = "528801765.955098"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.PastEventsTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Focus_timer.PastEventsTableViewController"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer%202/Focus%20timer/PastEventsTableViewController.swift"
+                  timestampString = "528801765.956308"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "438">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_timer.PastEventsTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Focus_timer.PastEventsTableViewController&gt;"
+                  moduleName = "Focus timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s3551368/Desktop/Focus%20timer%202/Focus%20timer/PastEventsTableViewController.swift"
+                  timestampString = "528801765.957456"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
