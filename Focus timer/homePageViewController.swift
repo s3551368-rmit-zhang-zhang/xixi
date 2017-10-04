@@ -15,6 +15,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var placementAnswer = 0
     
+    var labeltt : String = ""
     let mContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     
     @IBOutlet weak var pickerView: UIPickerView!
@@ -99,18 +100,21 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             startOutlet.isHidden = false
             PresetedSec = 1500
             oriSec = 1500
+            labeltt = "25:00"
         }
         else if(placementAnswer == 2)
         {
             startOutlet.isHidden = false
             PresetedSec = 1800
             oriSec = 1800
+            labeltt = "30:00"
         }
         else if(placementAnswer == 3)
         {
             startOutlet.isHidden = false
             PresetedSec = 3600
             oriSec = 3600
+            labeltt = "60:00"
         }
         else
         {
@@ -153,7 +157,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         startOutlet.isHidden = false
         focusLabel.isHidden = true
         timer.invalidate()
-        Label.text = "25:00"
+        Label.text = labeltt
         audioPlayer.stop()
         menuButton.isEnabled = true
         shareButton.isEnabled = true
