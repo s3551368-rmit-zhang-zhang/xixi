@@ -18,7 +18,7 @@ extension CustomerizeEvent {
     }
 
     @NSManaged public var note: String?
-    @NSManaged public var timeLength: Int32
+    @NSManaged public var timeLength: Int32?
     @NSManaged public var owner: Customer?
 
 }
