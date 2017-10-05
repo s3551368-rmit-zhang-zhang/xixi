@@ -95,10 +95,8 @@ class PastEventsTableViewController: UITableViewController{
         if editingStyle == UITableViewCellEditingStyle.delete
         {
            
-            eventArray.remove(at: indexPath.row)
-            
             mContext.delete(eventArray[indexPath.row])
-            
+            eventArray.remove(at: indexPath.row)
             tableView.reloadData()
              do{
                 try mContext.save()
