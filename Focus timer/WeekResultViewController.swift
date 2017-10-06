@@ -11,7 +11,7 @@ import Charts
 import CoreData
 class WeekResultViewController: UIViewController{
    
-    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var lineChart: LineChartView!
     
@@ -25,7 +25,6 @@ class WeekResultViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        load()
         updateGraph()
         sideMenus()
         // Do any additional setup after loading the view.
@@ -54,7 +53,7 @@ class WeekResultViewController: UIViewController{
             fatalError("could not search：\(error)")
         }
         let fetchRequest : NSFetchRequest = CustomerizeEvent.fetchRequest()
-        fetchRequest.fetchLimit = 10
+        fetchRequest.fetchLimit = 100
         fetchRequest.fetchOffset = 0
         
         fetchRequest.entity = NSEntityDescription.entity(forEntityName: "CustomerizeEvent", in: mContext)
@@ -71,6 +70,7 @@ class WeekResultViewController: UIViewController{
     }
 
     func updateGraph(){
+        load()
         var lineChartEntry  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
         
         let numbers = time.flatMap{ Double($0) }
@@ -84,7 +84,7 @@ class WeekResultViewController: UIViewController{
             lineChartEntry.append(value) // here we add it to the data set
         }
         
-        let line1 = LineChartDataSet(values: lineChartEntry, label: "Mintues") //Here we convert lineChartEntry to a LineChartDataSet
+        let line1 = LineChartDataSet(values: lineChartEntry, label: "Seconds") //Here we convert lineChartEntry to a LineChartDataSet
         
         line1.colors = [NSUIColor.blue] //Sets the colour to blue
         
@@ -100,13 +100,11 @@ class WeekResultViewController: UIViewController{
     {
         if revealViewController() != nil
         {
-            
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 180
             revealViewController().rightViewRevealWidth = 180
             
-            
-            shareButton.target = revealViewController()
-            shareButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }

@@ -11,7 +11,8 @@ import Social
 class FacebookShareViewController: UIViewController {
 
     
-    @IBOutlet weak var shareButton: UIBarButtonItem!
+
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -92,17 +93,17 @@ class FacebookShareViewController: UIViewController {
     {
         if revealViewController() != nil
         {
-        
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 180
             revealViewController().rightViewRevealWidth = 180
             
-            
-            shareButton.target = revealViewController()
-            shareButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
+
 
 
     /*

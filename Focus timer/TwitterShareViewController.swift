@@ -13,7 +13,7 @@ class TwitterShareViewController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
    
-    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var background: UIImageView!{
         didSet{
@@ -92,17 +92,16 @@ class TwitterShareViewController: UIViewController {
     {
         if revealViewController() != nil
         {
-            
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 180
             revealViewController().rightViewRevealWidth = 180
             
             
-            shareButton.target = revealViewController()
-            shareButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-            
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
+
     
     
     /*

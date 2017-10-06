@@ -22,7 +22,6 @@
 		712F68FC1F46D49100E12B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F68FA1F46D49100E12B4F /* LaunchScreen.storyboard */; };
 		712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69061F46D49100E12B4F /* Focus_timerTests.swift */; };
 		712F69121F46D49100E12B4F /* Focus_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F69111F46D49100E12B4F /* Focus_timerUITests.swift */; };
-		713F9AB71F518C1E0039931A /* MonthReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */; };
 		714321021F834A3400073D32 /* PastEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714321011F834A3400073D32 /* PastEventsTableViewController.swift */; };
 		714B61841F82269E00A5671B /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B61831F82269E00A5671B /* LoginPageViewController.swift */; };
 		7150F07B1F7CA80300FD3665 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150F07A1F7CA80300FD3665 /* Background.swift */; };
@@ -98,7 +97,6 @@
 		712F690D1F46D49100E12B4F /* Focus timerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus timerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712F69111F46D49100E12B4F /* Focus_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_timerUITests.swift; sourceTree = "<group>"; };
 		712F69131F46D49100E12B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthReviewViewController.swift; sourceTree = "<group>"; };
 		714321011F834A3400073D32 /* PastEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastEventsTableViewController.swift; sourceTree = "<group>"; };
 		714B61831F82269E00A5671B /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		7150F07A1F7CA80300FD3665 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -280,7 +278,6 @@
 				710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */,
 				71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */,
 				716EF83D1F85F7B100801A4B /* EventsTableViewCell.swift */,
-				713F9AB61F518C1E0039931A /* MonthReviewViewController.swift */,
 				710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */,
 				710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */,
 				7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */,
@@ -646,7 +643,6 @@
 				710A42AD1F4FD1E700B18F6D /* TwitterShareViewController.swift in Sources */,
 				249F26BA1F832C9A00832E8E /* dataModel.xcdatamodeld in Sources */,
 				7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */,
-				713F9AB71F518C1E0039931A /* MonthReviewViewController.swift in Sources */,
 				7150F07F1F7CB0F800FD3665 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

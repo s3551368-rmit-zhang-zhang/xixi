@@ -22,7 +22,6 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var Label: UILabel!
     
-    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -61,7 +60,6 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         startOutlet.isHidden = false
         focusLabel.isHidden = true
         menuButton.isEnabled = true
-        shareButton.isEnabled = true
         stopOutlet.isHidden = true
         startOutlet.isHidden = true
         do
@@ -133,7 +131,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         focusLabel.isHidden = false
         audioPlayer.play()
         menuButton.isEnabled = false
-        shareButton.isEnabled = false
+
         stopOutlet.isHidden = false
     }
     
@@ -160,7 +158,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         Label.text = labeltt
         audioPlayer.stop()
         menuButton.isEnabled = true
-        shareButton.isEnabled = true
+    
         createEvent()
         stopOutlet.isHidden = true
     }
@@ -220,8 +218,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             revealViewController().rightViewRevealWidth = 180
             
             
-            shareButton.target = revealViewController()
-            shareButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }

@@ -27,7 +27,7 @@ class PastEventsTableViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         load()
-        //sideMenus()
+        sideMenus()
         eventTable.delegate = self
         eventTable.dataSource = self
     }
@@ -51,7 +51,7 @@ class PastEventsTableViewController: UITableViewController{
             fatalError("could not search：\(error)")
         }
         let fetchRequest : NSFetchRequest = CustomerizeEvent.fetchRequest()
-        fetchRequest.fetchLimit = 10
+        fetchRequest.fetchLimit = 100
         fetchRequest.fetchOffset = 0
         
         fetchRequest.entity = NSEntityDescription.entity(forEntityName: "CustomerizeEvent", in: mContext)
