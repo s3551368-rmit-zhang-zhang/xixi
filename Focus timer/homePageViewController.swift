@@ -16,12 +16,16 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var placementAnswer = 0
     
     var labeltt : String = ""
+    
     let mContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var Label: UILabel!
     
+    @IBOutlet weak var summaryLabel: UILabel!
+  
+    @IBOutlet weak var temLabel: UILabel!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -45,12 +49,16 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var oriSec = 0
     
+    
     var timer = Timer()
     
     var Array = ["Please select focus time","25:00","30:00","60:00"]
     
     var audioPlayer = AVAudioPlayer()
     
+    let forecastAPIKey = "c3d5a7acd21d094bcc91ff105d36ae2e"
+    
+    let city: (lat: Double, long: Double) = (37.8267,-122.4233)
     
     override func viewDidLoad()
     {
@@ -72,6 +80,24 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             //ERROR
         }
         super.viewDidLoad()
+        let forecastService = ForecastService(APIKey: forecastAPIKey)
+        forecastService.getForecast(latitude: city.lat, longtitude: city.long) { (currentWeather) in
+            if let currentWeather = currentWeather{
+                DispatchQueue.main.async {
+                    if let temprature = currentWeather.temperature{
+                        self.temLabel.text = "\(temprature)°"
+                    }else {
+                        self.temLabel.text = "-"
+                    }
+                    if let summary = currentWeather.summary{
+                        self.summaryLabel.text = "\(summary)"
+                    }else {
+                        self.temLabel.text = "-"
+                    }
+
+                }
+            }
+        }
     }
     
     
@@ -158,9 +184,9 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         Label.text = labeltt
         audioPlayer.stop()
         menuButton.isEnabled = true
-    
         createEvent()
         stopOutlet.isHidden = true
+        PresetedSec = oriSec
     }
     
     func createEvent(){

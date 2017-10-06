@@ -33,6 +33,9 @@
 		71B2C25C1F8492EB00740097 /* homePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2C25B1F8492EB00740097 /* homePageViewController.swift */; };
 		71B2C25E1F84ABF900740097 /* AccountId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2C25D1F84ABF900740097 /* AccountId.swift */; };
 		71C1E3661F5142DE00794ADA /* WeekResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */; };
+		71CB2EDF1F87329000F78E1C /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB2EDE1F87329000F78E1C /* NetworkProcessor.swift */; };
+		71CB2EE11F8734E900F78E1C /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB2EE01F8734E900F78E1C /* ForecastService.swift */; };
+		71CB2EE31F87371900F78E1C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB2EE21F87371900F78E1C /* CurrentWeather.swift */; };
 		F956686CC2701B9AD0DD046D /* Pods_Focus_timerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2A3E9CDCE616EF22CD3A02 /* Pods_Focus_timerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +113,9 @@
 		71B2C25B1F8492EB00740097 /* homePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageViewController.swift; sourceTree = "<group>"; };
 		71B2C25D1F84ABF900740097 /* AccountId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountId.swift; sourceTree = "<group>"; };
 		71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekResultViewController.swift; sourceTree = "<group>"; };
+		71CB2EDE1F87329000F78E1C /* NetworkProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
+		71CB2EE01F8734E900F78E1C /* ForecastService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		71CB2EE21F87371900F78E1C /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		71E63A101F52B4CA009F84F2 /* Focus timerUITests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus timerUITests2.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81332EDDE7A99CDEE0C795E1 /* Pods-Focus timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timer/Pods-Focus timer.release.xcconfig"; sourceTree = "<group>"; };
 		A3E9754F37FC3C82421B794E /* Pods-Focus timerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timerTests/Pods-Focus timerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +271,9 @@
 				7150F07A1F7CA80300FD3665 /* Background.swift */,
 				7150F07E1F7CB0F800FD3665 /* Music.swift */,
 				71B2C25D1F84ABF900740097 /* AccountId.swift */,
+				71CB2EDE1F87329000F78E1C /* NetworkProcessor.swift */,
+				71CB2EE01F8734E900F78E1C /* ForecastService.swift */,
+				71CB2EE21F87371900F78E1C /* CurrentWeather.swift */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -638,11 +647,14 @@
 				710A42A81F4FAEDD00B18F6D /* BackGroundsViewController.swift in Sources */,
 				71B2C25E1F84ABF900740097 /* AccountId.swift in Sources */,
 				7150F07B1F7CA80300FD3665 /* Background.swift in Sources */,
+				71CB2EE11F8734E900F78E1C /* ForecastService.swift in Sources */,
+				71CB2EE31F87371900F78E1C /* CurrentWeather.swift in Sources */,
 				716EF83E1F85F7B100801A4B /* EventsTableViewCell.swift in Sources */,
 				712F68F21F46D49100E12B4F /* AppDelegate.swift in Sources */,
 				710A42AD1F4FD1E700B18F6D /* TwitterShareViewController.swift in Sources */,
 				249F26BA1F832C9A00832E8E /* dataModel.xcdatamodeld in Sources */,
 				7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */,
+				71CB2EDF1F87329000F78E1C /* NetworkProcessor.swift in Sources */,
 				7150F07F1F7CB0F800FD3665 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
