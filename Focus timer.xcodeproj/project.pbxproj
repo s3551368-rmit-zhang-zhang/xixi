@@ -32,6 +32,7 @@
 		7186E3311F4EF4270063A7F5 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */; };
 		71B2C25C1F8492EB00740097 /* homePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2C25B1F8492EB00740097 /* homePageViewController.swift */; };
 		71B2C25E1F84ABF900740097 /* AccountId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2C25D1F84ABF900740097 /* AccountId.swift */; };
+		71BA2E821F88BCF00068B6BF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BA2E811F88BCF00068B6BF /* WeatherViewController.swift */; };
 		71C1E3661F5142DE00794ADA /* WeekResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */; };
 		71CB2EDF1F87329000F78E1C /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB2EDE1F87329000F78E1C /* NetworkProcessor.swift */; };
 		71CB2EE11F8734E900F78E1C /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB2EE01F8734E900F78E1C /* ForecastService.swift */; };
@@ -112,6 +113,7 @@
 		7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		71B2C25B1F8492EB00740097 /* homePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageViewController.swift; sourceTree = "<group>"; };
 		71B2C25D1F84ABF900740097 /* AccountId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountId.swift; sourceTree = "<group>"; };
+		71BA2E811F88BCF00068B6BF /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekResultViewController.swift; sourceTree = "<group>"; };
 		71CB2EDE1F87329000F78E1C /* NetworkProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		71CB2EE01F8734E900F78E1C /* ForecastService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */,
 				71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */,
 				716EF83D1F85F7B100801A4B /* EventsTableViewCell.swift */,
+				71BA2E811F88BCF00068B6BF /* WeatherViewController.swift */,
 				710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */,
 				710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */,
 				7186E3301F4EF4270063A7F5 /* MusicTableViewController.swift */,
@@ -638,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				710A42AF1F4FD1FA00B18F6D /* FacebookShareViewController.swift in Sources */,
+				71BA2E821F88BCF00068B6BF /* WeatherViewController.swift in Sources */,
 				7186E3311F4EF4270063A7F5 /* MusicTableViewController.swift in Sources */,
 				714321021F834A3400073D32 /* PastEventsTableViewController.swift in Sources */,
 				710A42AA1F4FB5D300B18F6D /* AboutFocusViewController.swift in Sources */,

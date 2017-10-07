@@ -86,7 +86,7 @@ class PastEventsTableViewController: UITableViewController{
         
         let cell : EventsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! EventsTableViewCell
         cell.eventLabel?.text = note[indexPath.row]
-        cell.timeLabel?.text = String(time[indexPath.row])
+        cell.timeLabel?.text = String(time[indexPath.row])+"s"
         return cell
     }
     
