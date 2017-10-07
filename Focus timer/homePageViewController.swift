@@ -220,9 +220,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         do{
             try mContext.save()
             print("save EVENT successfully")
-            print(event.note)
-            print(Int(event.timeLength))
-            print(event.owner?.accountNum)
+            
         }catch{
             print("ERROR")
         }
