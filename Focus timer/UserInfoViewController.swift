@@ -1,32 +1,31 @@
 //
-//  WeekResultViewController.swift
+//  UserInfoViewController.swift
 //  Focus timer
 //
-//  Created by Zhang Zhang on 8/26/17.
+//  Created by James zhang on 8/10/17.
 //  Copyright © 2017 Zhang Zhang. All rights reserved.
 //
 
 import UIKit
-import Charts
 import CoreData
-class WeekResultViewController: UIViewController{
-   
+class UserInfoViewController: UIViewController {
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
+   
+    @IBOutlet weak var accountNum: UITextField!
     
-    @IBOutlet weak var lineChart: LineChartView!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBOutlet weak var saveBtn: UIButton!
     
     let mContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
-
-    var time = [Int32]()
-    
-    var number : [Double] = []
     
     var loginedCustomer : Customer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateGraph()
         sideMenus()
+        load()
         // Do any additional setup after loading the view.
     }
 
@@ -50,52 +49,45 @@ class WeekResultViewController: UIViewController{
             
             for c:Customer in fetchedObjects as![Customer] {
                 self.loginedCustomer = c
+                accountNum?.text = c.accountNum
+                passwordTF?.text = c.password
             }
         }catch {
             fatalError("could not search：\(error)")
         }
-        let fetchRequest : NSFetchRequest = CustomerizeEvent.fetchRequest()
-        fetchRequest.fetchLimit = 100
+    }
+    
+    @IBAction func editeBtn(_ sender: Any) {
+        passwordTF.isEnabled = true
+        accountNum.isEnabled = true
+    }
+    
+    
+    @IBAction func saveDetail(_ sender: Any) {
+        let fetchRequest : NSFetchRequest = Customer.fetchRequest()
+        fetchRequest.fetchLimit = 10
         fetchRequest.fetchOffset = 0
         
-        fetchRequest.entity = NSEntityDescription.entity(forEntityName: "CustomerizeEvent", in: mContext)
-        
+        fetchRequest.entity = NSEntityDescription.entity(forEntityName: "Customer", in: mContext)
+        fetchRequest.predicate = NSPredicate(format:"accountNum =%@",AccountId.accuntnum)
         do {
             let fetchedObjects:[AnyObject]? = try mContext.fetch(fetchRequest)
-            for c:CustomerizeEvent in fetchedObjects as! [CustomerizeEvent]{
-                time.append(c.timeLength)
+            for c:Customer in fetchedObjects as! [Customer]{
+                c.setValue(accountNum.text, forKey: "accountNum")
+                c.setValue(passwordTF.text, forKey: "password")
             }
         }catch {
             fatalError("could not search：\(error)")
         }
-        
-    }
 
-    func updateGraph(){
-        load()
-        var lineChartEntry  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
-        
-        let numbers = time.flatMap{ Double($0) }
-        
-        
-        //here is the for loop
-        for i in 0..<numbers.count {
-            
-            let value = ChartDataEntry(x: Double(i), y: numbers[i]) // here we set the X and Y status in a data chart entry
-            
-            lineChartEntry.append(value) // here we add it to the data set
+        do{
+            try mContext.save()
+            print("Change ID Successfully")
+        }catch{
+            print("Fail to change")
         }
-        
-        let line1 = LineChartDataSet(values: lineChartEntry, label: "Seconds") //Here we convert lineChartEntry to a LineChartDataSet
-        
-        line1.colors = [NSUIColor.blue] //Sets the colour to blue
-        
-        
-        let data = LineChartData() //This is the object that will be added to the chart
-        
-        data.addDataSet(line1) //Adds the line to the dataSet
-        
-        lineChart.data = data
+        accountNum.text = accountNum.text
+        passwordTF.text = passwordTF.text
     }
     
     func sideMenus()
@@ -111,14 +103,6 @@ class WeekResultViewController: UIViewController{
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

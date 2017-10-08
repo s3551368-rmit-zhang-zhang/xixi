@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243BD9701F89C84F00E8BF4C /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD96F1F89C84F00E8BF4C /* LoginPageViewController.swift */; };
+		243BD9741F89CB6D00E8BF4C /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD9731F89CB6D00E8BF4C /* UserInfoViewController.swift */; };
+		243BD9761F89DA0200E8BF4C /* ChangedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD9751F89DA0200E8BF4C /* ChangedAccount.swift */; };
 		2464D76A1F80A3190036F600 /* Magic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2464D7681F80A3190036F600 /* Magic.mp3 */; };
 		2464D76B1F80A3190036F600 /* Mistery.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2464D7691F80A3190036F600 /* Mistery.mp3 */; };
 		249F26BA1F832C9A00832E8E /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 249F26B81F832C9A00832E8E /* dataModel.xcdatamodeld */; };
@@ -81,6 +84,9 @@
 		0B2A3E9CDCE616EF22CD3A02 /* Pods_Focus_timerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_timerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5096CB59FE13E69A9F05E9 /* Pods_Focus_timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E1BF62FA1225B36C237601 /* Pods-Focus timerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus timerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Focus timerTests/Pods-Focus timerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		243BD96F1F89C84F00E8BF4C /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		243BD9731F89CB6D00E8BF4C /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		243BD9751F89DA0200E8BF4C /* ChangedAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangedAccount.swift; sourceTree = "<group>"; };
 		2464D7681F80A3190036F600 /* Magic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Magic.mp3; sourceTree = "<group>"; };
 		2464D7691F80A3190036F600 /* Mistery.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mistery.mp3; sourceTree = "<group>"; };
 		249F26B91F832C9A00832E8E /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -174,6 +180,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		243BD96C1F89C63400E8BF4C /* UnitTests file */ = {
+			isa = PBXGroup;
+			children = (
+				243BD96F1F89C84F00E8BF4C /* LoginPageViewController.swift */,
+			);
+			name = "UnitTests file";
+			sourceTree = "<group>";
+		};
 		249F26BB1F832CF000832E8E /* Coredata */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				712F68F01F46D49100E12B4F /* Focus timer */,
+				243BD96C1F89C63400E8BF4C /* UnitTests file */,
 				712F69051F46D49100E12B4F /* Focus timerTests */,
 				712F69101F46D49100E12B4F /* Focus timerUITests */,
 				712F68EF1F46D49100E12B4F /* Products */,
@@ -276,6 +291,7 @@
 				71CB2EDE1F87329000F78E1C /* NetworkProcessor.swift */,
 				71CB2EE01F8734E900F78E1C /* ForecastService.swift */,
 				71CB2EE21F87371900F78E1C /* CurrentWeather.swift */,
+				243BD9751F89DA0200E8BF4C /* ChangedAccount.swift */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -289,6 +305,7 @@
 				710A42AC1F4FD1E700B18F6D /* TwitterShareViewController.swift */,
 				71C1E3651F5142DE00794ADA /* WeekResultViewController.swift */,
 				716EF83D1F85F7B100801A4B /* EventsTableViewCell.swift */,
+				243BD9731F89CB6D00E8BF4C /* UserInfoViewController.swift */,
 				71BA2E811F88BCF00068B6BF /* WeatherViewController.swift */,
 				710A42A71F4FAEDD00B18F6D /* BackGroundsViewController.swift */,
 				710A42A91F4FB5D300B18F6D /* AboutFocusViewController.swift */,
@@ -641,6 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				710A42AF1F4FD1FA00B18F6D /* FacebookShareViewController.swift in Sources */,
+				243BD9741F89CB6D00E8BF4C /* UserInfoViewController.swift in Sources */,
 				71BA2E821F88BCF00068B6BF /* WeatherViewController.swift in Sources */,
 				7186E3311F4EF4270063A7F5 /* MusicTableViewController.swift in Sources */,
 				714321021F834A3400073D32 /* PastEventsTableViewController.swift in Sources */,
@@ -659,6 +677,7 @@
 				249F26BA1F832C9A00832E8E /* dataModel.xcdatamodeld in Sources */,
 				7186E32B1F4EA4660063A7F5 /* SWRevealViewController.m in Sources */,
 				71CB2EDF1F87329000F78E1C /* NetworkProcessor.swift in Sources */,
+				243BD9761F89DA0200E8BF4C /* ChangedAccount.swift in Sources */,
 				7150F07F1F7CB0F800FD3665 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				712F69071F46D49100E12B4F /* Focus_timerTests.swift in Sources */,
+				243BD9701F89C84F00E8BF4C /* LoginPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

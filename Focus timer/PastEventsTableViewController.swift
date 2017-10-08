@@ -35,7 +35,9 @@ class PastEventsTableViewController: UITableViewController{
     func load(){
         let request:NSFetchRequest = Customer.fetchRequest()
         let accountPredicate = NSPredicate(format:"accountNum =%@",AccountId.accuntnum)
-        request.predicate = accountPredicate
+        let passwordPredicate = NSPredicate(format:"password =%@",AccountId.password)
+        let compound:NSCompoundPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [accountPredicate,passwordPredicate])
+        request.predicate = compound
         request.fetchLimit = 1
         request.fetchOffset = 0
         

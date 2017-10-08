@@ -33,7 +33,6 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var stopOutlet: UIButton!
     
-    @IBOutlet weak var focusLabel: UILabel!
     
     @IBOutlet weak var backgroundView: UIImageView!{
         didSet{
@@ -66,7 +65,6 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         pickerView.delegate = self
         pickerView.dataSource = self
         startOutlet.isHidden = false
-        focusLabel.isHidden = true
         menuButton.isEnabled = true
         stopOutlet.isHidden = true
         startOutlet.isHidden = true
@@ -154,7 +152,7 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(homePageViewController.counter), userInfo: nil, repeats: true)
         startOutlet.isHidden = true
-        focusLabel.isHidden = false
+       
         audioPlayer.play()
         menuButton.isEnabled = false
 
@@ -179,7 +177,6 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func stopAction(_ sender: Any)
     {
         startOutlet.isHidden = false
-        focusLabel.isHidden = true
         timer.invalidate()
         Label.text = labeltt
         audioPlayer.stop()
@@ -192,7 +189,9 @@ class homePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func createEvent(){
         let request:NSFetchRequest = Customer.fetchRequest()
         let accountPredicate = NSPredicate(format:"accountNum =%@",AccountId.accuntnum)
-        request.predicate = accountPredicate
+        let passwordPredicate = NSPredicate(format:"password =%@",AccountId.password)
+        let compound:NSCompoundPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [accountPredicate,passwordPredicate])
+        request.predicate = compound
         request.fetchLimit = 1
         request.fetchOffset = 0
         

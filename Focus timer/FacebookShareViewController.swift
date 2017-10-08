@@ -10,8 +10,6 @@ import UIKit
 import Social
 class FacebookShareViewController: UIViewController {
 
-    
-
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var dateLabel: UILabel!

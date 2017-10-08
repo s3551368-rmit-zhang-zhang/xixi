@@ -1,13 +1,13 @@
 //
-//  AccountNum.swift
+//  ChangedAccount.swift
 //  Focus timer
 //
-//  Created by Zhang Zhang on 10/4/17.
+//  Created by James zhang on 8/10/17.
 //  Copyright © 2017 Zhang Zhang. All rights reserved.
 //
 
 import Foundation
-struct AccountId {
+struct ChangedAcoount {
     static var accuntnum:String = ""
     static var password:String = ""
 }
