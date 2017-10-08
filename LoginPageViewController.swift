@@ -29,10 +29,29 @@ class LoginPageViewController: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    /* Business Rules:
+     *
+     * 1. Testing Properties
+     *    todayFitnessSelected and todayFoodSelected cannot have no elememts in the same time.
+     *    Because, none selecting neither in food or fitness will make the plan unreasonable.
+     *    That means the count of each set cannot be 0 in the same time
+     *
+     * 2. Testing Individual Methods
+     *    getIntakeResults() method should return the right value which is based on food selecting
+     *    getConsumeResults() method should return the right value which is based on fitness
+     *    selecting.
+     *
+     * 3. Testing Method Combinations
+     *    getPlanResults() method should return the right calories based on the getIntakeResults()
+     *    and getConsumeResults()
+     *
+     * 4. Testing the Class
+     *    Run the suite of tests.
+     */
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //1. Testing Properties
+    
+    func testUserInfo(){
+        
     }
-    
 }

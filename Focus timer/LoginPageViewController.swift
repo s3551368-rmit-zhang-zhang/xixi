@@ -65,32 +65,5 @@ class LoginPageViewController: UIViewController {
             AccountId.password = Password.text!
             self.performSegue(withIdentifier: "logined", sender: nil)
         }
-}
-//    @IBAction func loginBtnClick(_ sender: Any) {
-//        let fetchRequest : NSFetchRequest = Customer.fetchRequest()
-//        fetchRequest.fetchLimit = 10
-//        fetchRequest.fetchOffset = 0
-//        
-//        fetchRequest.entity = NSEntityDescription.entity(forEntityName: "Customer", in: mContext)
-//        let testAccount = "aa"
-//        fetchRequest.predicate = NSPredicate(format:"accountNum =%@",testAccount)
-//        
-//        do {
-//            let fetchedObjects:[AnyObject]? = try mContext.fetch(fetchRequest)
-//            for c:Customer in fetchedObjects as! [Customer]{
-//               c.setValue("bb", forKey: "accountNum")
-//            }
-//        }catch {
-//            fatalError("could not search：\(error)")
-//        }
-//        
-//        do{
-//            try mContext.save()
-//            print("Change ID Successfully")
-//        }catch{
-//            print("Fail to change")
-//        }
-//        
-//    }
-   
+}   
 }
