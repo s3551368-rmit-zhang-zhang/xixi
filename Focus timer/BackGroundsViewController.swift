@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BackGroundsViewController: UIViewController {
+class BackGroundsViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var image: UIImageView!
     
@@ -53,15 +53,40 @@ class BackGroundsViewController: UIViewController {
         Image.image = UIImage(named:"5b2fe7d91e05f57bce2f80b325cbe45e--white-iphone-background-white-wallpaper-iphone")!
     }
     
+    @IBAction func cameraBtn(_ sender: Any) {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            
+            let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
+            
+            actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler:{ (action: UIAlertAction) in
+                
+                if UIImagePickerController.isSourceTypeAvailable(.camera){
+                    imagePickerController.sourceType = .camera
+                    self.present(imagePickerController, animated: true, completion: nil)
+                }else {
+                    print("Camera is not avaible")
+                }
+            } ))
+            
+            actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler:{
+                (action: UIAlertAction) in imagePickerController.sourceType = .photoLibrary
+                self.present(imagePickerController, animated: true, completion: nil)
+            } ))
+            
+            actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil ))
+            
+            self.present(actionSheet, animated: true, completion: nil)
+        }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            self.image.image = image
+            Image.image = image!
+        picker.dismiss(animated: true, completion: nil)
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     
 }
